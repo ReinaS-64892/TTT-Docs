@@ -5,7 +5,7 @@ sidebar_position: 4
 # リアルタイムプレビュー
 
 :::warning
-VRChatAvatar の環境で、 NDMF が存在する場合は、こちらの NDMF Preview を参照してください。  
+VRChatAvatar の環境で、 NDMF が存在する場合は、こちらの [NDMF Preview](/docs/Reference/General/NDMFPreview.md) を参照してください。  
 これらの項目は NDMF Preview が使用される場合使用され無い機能についてのリファレンスです。
 :::
 
