@@ -4,6 +4,11 @@
 
 髪の毛にメッシュを入れるとき、グラデーションテクスチャーを作成する手間を省き、もっと高度な色や透明度の指定を行うために作られたコンポーネント
 
+## 属性
+
+- フェーズ -> [AfterUVModification | UV変更後](/docs/Reference/General/ExecutionOrder.md#afteruvmodification--uv変更後)
+- Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
+
 ## 設定項目
 
 ### レンダラー設定

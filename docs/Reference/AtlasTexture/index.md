@@ -10,6 +10,10 @@ sidebar_position: 6
 テクスチャの必要な部分のみを集めたテクスチャを作ることでVRAMの削減を実現する、  
 アイランド再配置技術と矩形転写(または、UVtoUV の転写技術)を基礎とした [AAO](https://github.com/anatawa12/AvatarOptimizer) に触発されて作られたコンポーネント
 
+## 属性
+
+- フェーズ -> [Optimizing | 最適化](/docs/Reference/General/ExecutionOrder.md#optimizing--最適化)
+
 ## Atlas化される条件
 
 ### レンダラー
