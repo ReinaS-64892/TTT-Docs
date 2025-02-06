@@ -10,12 +10,12 @@ TexTransTool のコンポーネントの[実行順序](/docs/Reference/General/E
 
 ## 保証する範囲
 
-GroupComponent　の子のオブジェクトの1段目までを保証します。
+GroupComponent の配下すべてのオブジェクトを保証します。
 
-### 保証範囲の拡張
-
-上記の保証範囲に GroupComponent を置いた場合、その子のオブジェクトの1段目まで、追加で保証できます。
+:::warning
+GroupComponent 配下に、GroupComponent を配置した場合、一番上段に存在する GroupComponent の効果が優先され、その配下の GroupComponent は効力を失います。
+:::
 
 ## 実行順
 
-基本的にヒエラルキーの上から順に実行します。
+ヒエラルキーの上から順に実行し、子を持っていた場合その子を実行してから下に実行して行きます。
