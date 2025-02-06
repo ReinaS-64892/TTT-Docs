@@ -205,7 +205,7 @@ sidebar_position: 7
 
 後者のエミッションの場合でも、エミッション用のプロパティを選択することで解決できますが、該当となるプロパティにテクスチャーが割り当てられていない場合適用されないのでご注意ください。
 
-## 後書きなど
+## ReinaSakiria's-Note
 
 [概要](#概要) に書いてあるようにこのコンポーネントの生まれは、[AtlasTexture](/docs/Reference/AtlasTexture) のために作成された UVtoUV技術 (内部名称`TransTexture`) の転用から始まり、この TexTransTool の色改変系機能として最初のコンポーネントとして、 TTT v0.1.0 から追加されました。
 

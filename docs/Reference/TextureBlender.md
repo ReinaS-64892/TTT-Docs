@@ -42,7 +42,7 @@
 
 [詳細はこちら](/docs/Reference/Common/BlendTypeKey)
 
-## 後書き
+## ReinaSakiria's-Note
 
 このコンポーネントは、[SimpleDecal](/docs/Reference/SimpleDecal) を作った時に、ついでに追加した 色合成機能 をそれ単体で切り出して使えるようにした物です。
 
