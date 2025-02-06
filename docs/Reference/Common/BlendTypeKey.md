@@ -54,6 +54,10 @@
 - Color-カラー
 - Luminosity-輝度
 
+クリスタ式合成モード
+
+- Clip/*
+
 ## 合成モードを追加する
 
 :::warning
@@ -74,7 +78,7 @@ BlendTypeKey の追加は実験的な機能です！予告なく機能変更や�
 
 `LanguageVersion`(必須) -> 主に[このあたりの物](https://github.com/microsoft/DirectXShaderCompiler/wiki/Language-Versions)を指しますが、Unity で使用できる HLSL バージョンは固定なので事実上 2018 以外の選択肢は存在しません。
 
-`ColorSpace`(必須) -> 色合成を行う色空間を定義します。 `Gamma` か `Linear` が選択可能で、関数に渡ってくる色の値がそれぞれに補正されたものになります。
+`ColorSpace`(必須) -> 色合成を行う色空間を定義します。 `Gamma` か `Linear` が選択可能ですが、特に意味はありません。
 
 `Key`(必須) -> BlendTypeKey となり、プレハブなどのセーブデータに保存されます！ 英数字と `/` だけが使用可能で、一階層以上にしてください。例 `YourNameOrProductName/BlendingName`
 
