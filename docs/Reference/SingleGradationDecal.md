@@ -71,7 +71,7 @@
 
 [SimpleDecal](/docs/Reference/SimpleDecal)の[詳細設定](/docs/Reference/SimpleDecal#詳細設定)と共通です。 [参照](/docs/Reference/SimpleDecal#詳細設定)
 
-## 後書き
+## ReinaSakiria's-Note
 
 このコンポーネントは、[SimpleDecal](/docs/Reference/SimpleDecal) にて行われていた、グラデーションの適用をもっと簡単に(そして手っ取り早く)するために作成し、TTT v0.7.0 から追加されました。
 
