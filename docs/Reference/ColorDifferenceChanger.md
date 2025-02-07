@@ -1,5 +1,9 @@
 # ColorDifferenceChanger
 
+:::warning
+ColorDifferenceChanger は実験的なコンポーネントです！予告なく機能変更や削除がされる可能性があります。
+:::
+
 ## 概要
 
 [VRC Color Changer](https://pukorufu.booth.pm/items/6519471) からインスパイアされて作られたコンポーネント
