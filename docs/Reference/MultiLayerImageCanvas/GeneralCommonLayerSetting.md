@@ -4,6 +4,10 @@ sidebar_position: 0
 
 # GeneralCommonLayerSetting
 
+:::warning
+MultiLayerImageCanvas に関連する機能は実験的です！予告なく機能変更や削除がされる可能性があります。
+:::
+
 ## 概要
 
 [MultiLayerImageCanvas](../MultiLayerImageCanvas/index.md) からレイヤーとして認識されるものすべてに共通する項目です。
@@ -25,3 +29,5 @@ sidebar_position: 0
 ### LayerMask
 
 一般的な画像編集ソフトにおいて、レイヤーマスクやレイヤーマスクを使用しない設定などと対応するものです
+
+[詳しくはこちら](/docs/Reference/MultiLayerImageCanvas/LayerMask)
