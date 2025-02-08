@@ -51,3 +51,9 @@ TexTransTool に限らず、ツールのコンポーネントが SceneView に�
 ![HideIconToggle](img/faq-HideIconToggle.png)
 
 少し上級者向けですが、特定のツールのアイコンを一気に非表示にしたい場合は[このスクリプト](https://gist.github.com/ReinaS-64892/ea5162bec70ab23404b4b0b4d9033726)を用いることで可能です。
+
+## TTT を使用したアセットが動かない
+
+そのアセットが古い TexTransTool のバージョンで作られた可能性があります。
+
+もしそうであれば、バックアップを取った後に[Migrator](/docs/Reference/EditorWindow/Migrator.md)を開き、マイグレーションを実行してみてください！
