@@ -4,6 +4,16 @@ sidebar_position: 3
 
 # FAQ
 
+## バグの報告や困った時
+
+この FAQ や リファレンス を参考にしても解決できなかったときやバグ報告等は
+
+- [NDMF Discord](https://discord.gg/dV4cVpewmM)
+- [GitHub](https://github.com/ReinaS-64892/TexTransTool)
+- Reina_Sakiria [ActivityPub](https://misskey.niri.la/@ReinaS_64892) or [X](https://x.com/ReinaS_64892)
+
+などにお尋ねください！
+
 ## アップロードしたアバターに効果が反映されないまたは壊れる
 
 主にプレビューでは正常に動作するが、VRChatにアップロードしたアバターにはプレビューのような結果にならない状態。
