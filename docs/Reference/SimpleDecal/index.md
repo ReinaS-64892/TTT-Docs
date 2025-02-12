@@ -78,7 +78,7 @@ sidebar_position: 7
 
 ### テクスチャー設定
 
-![TextureSetting](../img/sd-TextureSetting.png)
+![TextureSetting](img/sd-TextureSetting.png)
 
 #### デカールテクスチャー
 
@@ -113,7 +113,7 @@ sidebar_position: 7
 
 ### スケール設定
 
-![ScaleSetting-AspectFixed](../img/sd-ScaleSetting-AspectFixed.png)
+![ScaleSetting-AspectFixed](img/sd-ScaleSetting-AspectFixed.png)
 
 #### スケール
 
@@ -128,7 +128,7 @@ sidebar_position: 7
 有効だと画像のアスペクト比に応じて 縦幅 の値を自動設定します。
 
 アスペクト非固定無効化したUI  
-![ScaleSetting-NonAspectFixed](../img/sd-ScaleSetting-NonAspectFixed.png)
+![ScaleSetting-NonAspectFixed](img/sd-ScaleSetting-NonAspectFixed.png)
 
 #### 最大距離
 
@@ -150,7 +150,7 @@ sidebar_position: 7
 
 ### 詳細設定
 
-![AdvancedSetting](../img/sd-AdvancedSetting.png)
+![AdvancedSetting](img/sd-AdvancedSetting.png)
 
 #### 高品質なパディング
 
@@ -201,7 +201,7 @@ sidebar_position: 7
 前者の場合lilToonであれば 影色1のテクスチャー `_ShadowColorTex` などが存在し、それらに `_MainTex` とは違うテクスチャーが入っているようなマテリアルで発生し、それにもデカールを適用することで解決できます。
 
 具体的にはデカールを複製し、[ターゲットプロパティネーム](/docs/Reference/Common/TargetPropertyName)で該当するテクスチャーのプロパティを選択すること。
-![Q&A-ShadowDecal](../img/sd-Q&A-ShadowDecal.png)
+![Q&A-ShadowDecal](img/sd-Q&A-ShadowDecal.png)
 
 後者のエミッションの場合でも、エミッション用のプロパティを選択することで解決できますが、該当となるプロパティにテクスチャーが割り当てられていない場合適用されないのでご注意ください。
 

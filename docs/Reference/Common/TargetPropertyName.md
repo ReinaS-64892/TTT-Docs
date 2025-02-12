@@ -10,7 +10,7 @@ Unityのドキュメントであればこのあたりの物を指しています
 
 ## 設定項目
 
-![TargetPropertyName](../img/TargetPropertyName.png)
+![TargetPropertyName](img/TargetPropertyName.png)
 
 ### シェーダーセレクター
 
@@ -26,7 +26,7 @@ Unityのドキュメントであればこのあたりの物を指しています
 
 ### カスタムプロパティ
 
-![UseCustomPropertyName](../img/TargetPropertyName-UseCustomPropertyName.png)  
+![UseCustomPropertyName](img/TargetPropertyName-UseCustomPropertyName.png)  
 この項目を有効化すると上記2つの項目が無効化され、任意の文字で指定することが可能になります
 
 :::tip

@@ -39,7 +39,7 @@ Property "_MainTex" のみが対象になります。
 
 ### マテリアル選択候補の制限
 
-![LimitCandidateMaterials](../img/at-LimitCandidateMaterials.png)
+![LimitCandidateMaterials](img/at-LimitCandidateMaterials.png)
 
 マテリアルセレクターに表示されるマテリアルを割り当てた GameObject 配下の Renderer が使用するマテリアルに制限します。
 
@@ -47,7 +47,7 @@ Property "_MainTex" のみが対象になります。
 
 ### マテリアルセレクター
 
-![MaterialSelector](../img/at-MaterialSelector.png)
+![MaterialSelector](img/at-MaterialSelector.png)
 
 アトラス化の対象の選択と、大きさの優先度を指定できます。
 
@@ -55,7 +55,7 @@ Property "_MainTex" のみが対象になります。
 
 ### アトラス化設定
 
-![AtlasSetting](../img/at-AtlasSetting.png)
+![AtlasSetting](img/at-AtlasSetting.png)
 
 #### アトラステクスチャーサイズ
 
@@ -81,7 +81,7 @@ Property "_MainTex" のみが対象になります。
 アトラス化を適用するときにマテリアルを強制的に結合する機能
 
 有効な時に、追加の項目が表示されます。  
-![AtlasMergeMaterialSetting](../img/at-AtlasMergeMaterialSetting.png)
+![AtlasMergeMaterialSetting](img/at-AtlasMergeMaterialSetting.png)
 
 ##### プロパティベイク設定
 
