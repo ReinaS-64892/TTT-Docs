@@ -84,7 +84,7 @@ const config = {
             position: 'left',
             label: 'ドキュメント',
           },
-          {to: 'blog', label: 'ブログ', position: 'left'}, // or position: 'right'
+          { to: 'blog', label: 'ブログ', position: 'left' }, // or position: 'right'
           {
             type: 'localeDropdown',
             position: 'right',
@@ -105,6 +105,20 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/FAQ',
+            from: ['/docs/FAQ.md']
+          },
+        ],
+      }
+    ]
+  ]
 };
 
 export default config;
