@@ -115,6 +115,22 @@ const config = {
             to: '/docs/FAQ',
             from: ['/docs/FAQ.md']
           },
+          {
+            to: '/docs/Tutorial/ReductionTextureMemoryByAtlasing',
+            from: ['/docs/Tutorial/AtlasTexture-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/SetupSimpleDecal',
+            from: ['/docs/Tutorial/SimpleDecal-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/SetupGradationToHair',
+            from: ['/docs/Tutorial/SingleGradationDecal-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/ColorModificationByPSD',
+            from: ['/docs/Tutorial/TTTPSDImporter-Tutorial']
+          }
         ],
       }
     ]

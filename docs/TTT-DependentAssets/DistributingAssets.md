@@ -30,13 +30,13 @@ __そのアセットを作成するのに使用した TexTransTool のバージ�
 
 特定アバター向けの(PNG 一枚などの)専用テクスチャーを D&D で導入できる Prefab を作ることが可能です。
 
-基本的なセットアップ方法は、[専用テクスチャを導入する](/docs/Tutorial/SetupExclusiveTexture.md)を参照してください。それを基に作った GameObject (+ [TTT TextureBlender](/docs/Reference/TextureBlender.md)) を Prefab にすることで D&D で導入可能な専用テクスチャのセットアップになります。
+基本的なセットアップ方法は、[専用テクスチャを導入する](/docs/Tutorial/SetupExclusiveTexture)を参照してください。それを基に作った GameObject (+ [TTT TextureBlender](/docs/Reference/TextureBlender.md)) を Prefab にすることで D&D で導入可能な専用テクスチャのセットアップになります。
 
 ### セットアップされたデカール
 
 特定アバター向けに、追加のディティールを SimpleDecal を用いて簡単に導入できる Prefab を作ることが可能です。
 
-基本的なセットアップ方法は[シンプルなデカールを貼り付ける](/docs/Tutorial/SetupSimpleDecal.md)を参考にしてください。
+基本的なセットアップ方法は[シンプルなデカールを貼り付ける](/docs/Tutorial/SetupSimpleDecal)を参考にしてください。
 
 SimpleDecal は複数の方法でアバターのレンダラーを指定することができますが、 D&D で導入できるようにしたい場合は使用できる方法が限られます。具体的には [レンダラー選択モード-Manual](/docs/Reference/SimpleDecal#レンダラー選択モード-manual) は使用できません。この選択モードは SimpleDecal などの単体プレハブにした時点でセットアップが一部切れてしまいます。
 
@@ -52,7 +52,7 @@ SimpleDecal は複数の方法でアバターのレンダラーを指定する�
 
 マテリアルが置き換えられてい特定のアバターや衣装向けに [AtlasTexture](/docs/Reference/AtlasTexture) を用いた軽量化セットアップ Prefab を作ることが可能です。
 
-基本的なセットアップ方法は [アトラス化でテクスチャーメモリを削減する](/docs/Tutorial/ReductionTextureMemoryByAtlasing.md) を参考にしてください。
+基本的なセットアップ方法は [アトラス化でテクスチャーメモリを削減する](/docs/Tutorial/ReductionTextureMemoryByAtlasing) を参考にしてください。
 
 D&D でその [AtlasTexture](/docs/Reference/AtlasTexture) のセットアップを使用するにあたってこれといった注意事項はありません。
 
@@ -60,7 +60,7 @@ D&D でその [AtlasTexture](/docs/Reference/AtlasTexture) のセットアップ
 
 テクスチャが置き換えられていない特定のアバターや衣装向けに [TextureConfigurator](/docs/Reference/TextureConfigurator.md) を用いた軽量化セットアップ Prefab を作ることが可能です。
 
-基本的なセットアップ方法は [テクスチャの設定でテクスチャーメモリを削減する](/docs/Tutorial/ReductionTextureMemoryByTextureSetting.md) を参考に、 D&D でその [TextureConfigurator](/docs/Reference/TextureConfigurator.md) のセットアップを使用するにあたってこれといった注意事項はありません。
+基本的なセットアップ方法は [テクスチャの設定でテクスチャーメモリを削減する](/docs/Tutorial/ReductionTextureMemoryByTextureSetting) を参考に、 D&D でその [TextureConfigurator](/docs/Reference/TextureConfigurator.md) のセットアップを使用するにあたってこれといった注意事項はありません。
 
 ### 実験的機能を用いた高度な専用テクスチャー
 
