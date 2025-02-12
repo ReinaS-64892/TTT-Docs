@@ -48,7 +48,7 @@ Eyeテクスチャー には カラーバリエーション があることが�
 ![set-Result](img/set-Result.png)
 
 このままアップロードすれば、VRChat でも 専用テクスチャーが導入されていることが確認できます！
-<!-- ![set-ResultKawaiiPicture](img/set-ResultKawaiiPicture.png) -->
+![set-ResultKawaiiPicture](img/set-ResultKawaiiPicture.png)
 
 :::tip
 TexTransTool は非破壊なツールのなので、新しく生成した GameObject `TextureBlender` を無効化したり、削除すれば導入した専用テクスチャをいつでも外すことができます！
