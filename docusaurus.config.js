@@ -128,7 +128,7 @@ const config = {
             from: ['/docs/Tutorial/SingleGradationDecal-Tutorial']
           },
           {
-            to: '/docs/Tutorial/ColorModificationByPSD',
+            to: '/docs/Tutorial/TextureModificationByPSD',
             from: ['/docs/Tutorial/TTTPSDImporter-Tutorial']
           }
         ],
