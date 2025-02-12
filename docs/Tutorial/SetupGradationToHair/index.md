@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# SingleGradationDecal のチュートリアル
+# 髪にグラデーションを追加する
 
 手っ取り早く髪の毛とかにグラデーションを入れたいときに！
 
@@ -11,10 +11,6 @@ sidebar_position: 4
 そんなときのために！ 汎用性と引き換えに、グラデーションに特化した デカール(?) です！
 
 ## チュートリアル
-
-:::warning
-SingleGradationDecal は実験的なコンポーネントです！予告なく機能変更や削除がされる可能性があります。
-:::
 
 はじめに、アバターのルートを右クリックしてから、TexTransTool/TTT SingleGradationDecal を選択！  
 ![CreateSingleGradationDecal](img/sgd-CreateSingleGradationDecal.png)

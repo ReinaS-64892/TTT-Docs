@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 6
 ---
 
-# AtlasTextureのチュートリアル
+# アトラス化でテクスチャーメモリを削減する
 
 VRAMの使用量を削減したい！！
 
