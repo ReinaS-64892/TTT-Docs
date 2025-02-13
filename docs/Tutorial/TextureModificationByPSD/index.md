@@ -11,12 +11,12 @@ TTT PSD Importer と MultiLayerImageCanvas は実験的なコンポーネント�
 Photoshop や Clip Studio Paint を持ってないけど、テクスチャ改変がしたい！
 
 なら [GIMP](https://www.gimp.org/) や [Krita](https://krita.org/) でも使う? ...それらのソフトだと PSD が正しく読めないって?  
-別におかしなことじゃない、それらソフトは PSD を扱うことを目的としているわけじゃないのだから、そもそもお門違いな話！
+当然のことながら、それらソフトは PSD を扱うことを目的としているわけじゃないのだからそもそもお門違いな話だよ！
 
-そもそもペイントソフト間に互換性を作ることなど不可能、 Photoshop と Clip Studio Paint がほかに比べて近いから何とかなってるだけにすぎないんだよ。  
-それでもね...ペイントソフト間に互換性がなかったとしてもね...そのソフトウェアに対して、 __できるだけ互換性のある実装__ を作ることはできる。
+そもそもペイントソフト間に互換性を作ることなど不可能、 Photoshop と Clip Studio Paint がほかに比べて近いから何とかなってるだけにすぎないんだ...  
+それでもね、ペイントソフト間に互換性がなかったとしても、そのソフトウェアに対して、 __できるだけ互換性のある実装__ を作ることはできる。
 
-それが、 [TexTransTool PSD Importer](/docs/Reference/TexTransToolPSDImporter) と [MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas)！  
+それが、 [TexTransTool PSD Importer](/docs/Reference/TexTransToolPSDImporter) と [MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas)  
 これらを使えば Photoshop か Clip Studio Paint から出力された PSD をメジャーな範囲であれば高い再現度で扱うことができるんだ！  
 
 ## 共通のチュートリアル
