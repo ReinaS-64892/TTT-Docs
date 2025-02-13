@@ -112,10 +112,6 @@ const config = {
       {
         redirects: [
           {
-            to: '/docs/FAQ',
-            from: ['/docs/FAQ.md']
-          },
-          {
             to: '/docs/Tutorial/ReductionTextureMemoryByAtlasing',
             from: ['/docs/Tutorial/AtlasTexture-Tutorial']
           },
