@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'TexTransTool',
-  tagline: '非破壊テクスチャ改変ツール',
+  tagline: '非破壊テクスチャ改変ツール！',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
