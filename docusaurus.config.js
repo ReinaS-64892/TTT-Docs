@@ -128,8 +128,8 @@ const config = {
             from: ['/docs/Tutorial/TTTPSDImporter-Tutorial']
           },
           {
-            to: '/docs/Reference/YAxisFixedGradientLayer',
-            from: ['/docs/Reference/YAsixFixedGradientLayer']
+            to: '/docs/Reference/MultiLayerImageCanvas/YAxisFixedGradientLayer',
+            from: ['/docs/Reference/MultiLayerImageCanvas/YAsixFixedGradientLayer']
           }
         ],
       }
