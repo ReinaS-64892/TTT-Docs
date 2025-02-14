@@ -2,10 +2,10 @@
 sidebar_position: 10
 ---
 
-# YAsixFixedGradientLayer
+# YAxisFixedGradientLayer
 
 :::warning
-YAsixFixedGradientLayer は実験的なコンポーネントです！予告なく機能変更や削除がされる可能性があります。
+YAxisFixedGradientLayer は実験的なコンポーネントです！予告なく機能変更や削除がされる可能性があります。
 :::
 
 ## 概要

@@ -126,6 +126,10 @@ const config = {
           {
             to: '/docs/Tutorial/TextureModificationByPSD',
             from: ['/docs/Tutorial/TTTPSDImporter-Tutorial']
+          },
+          {
+            to: '/docs/Reference/YAxisFixedGradientLayer',
+            from: ['/docs/Reference/YAsixFixedGradientLayer']
           }
         ],
       }
