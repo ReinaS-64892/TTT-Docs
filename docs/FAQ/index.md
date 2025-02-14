@@ -28,7 +28,7 @@ TexTransTool はマテリアル置き換え等のアニメーション系の影�
 
 ## アップロード時やEditorの再生時、マニュアルベイク時に適用されない
 
-[チュートリアル](/docs/Tutorial#アップロードの時の注意点)に書かれている内容もご参照ください！
+TexTransTool のコンポーネントは基本的に、ビルド時に Active でないと動作しません。
 
 そして、プロジェクトに TexTransTool が対応している [NDMF](https://github.com/bdunderscore/ndmf) が導入されているかもご確認ください！
 

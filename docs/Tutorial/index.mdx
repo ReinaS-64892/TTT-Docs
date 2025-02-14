@@ -6,7 +6,11 @@ sidebar_position: 1
 
 ## これはなに？
 
-TexTransTool は [高レベルのアトラス化](/docs/Tutorial/AtlasTexture-Tutorial)や[直感的な色改変](/docs/Tutorial/SimpleDecal-Tutorial)が行えるツールです！
+TexTransTool は [専用テクスチャの導入](/docs/Tutorial/SetupExclusiveTexture) や [直感的な色改変](/docs/Tutorial/SetupSimpleDecal)、[強力なアトラス化](/docs/Tutorial/ReductionTextureMemoryByAtlasing) などが可能な、非破壊テクスチャ改変ツールです！
+
+```mdx-code-block
+<iframe width="640px" height="360px" src="https://www.youtube.com/embed/3Jzuf2eMGnM" title="TexTransTool - PR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
 ## インストール
 
@@ -24,19 +28,3 @@ import {TutorialCardElement} from '@site/src/components/TutorialCard';
 <TutorialCardElement />
 
 ```
-
-## アップロードの時の注意点
-
-TexTransTool は __非破壊テクスチャ改変ツール__ で、アップロード時にそれらコンポーネントの適用を行うので、__[プレビュー状態](/docs/Reference/General/Preview)でアップロードを行ってもアップロードが中断されます__。
-
-次に、アップロード時に適用される条件は
-
-- アバター配下に存在すること (Avatar Descriptorのついたゲームオブジェクトとその配下であること)
-- Active状態であること
-- タグがEditorOnlyではないこと
-
-の3つで、すべてEditorOnlyではないならこの画像のようになり  
-![IaA-Hierarchy](img/IaA-Hierarchy.png)  
-緑色の丸が付いている物だけアップロード時に適用されるのでご注意ください。
-
-最後に、アバターアップロードの時に [NDMF](https://github.com/bdunderscore/ndmf) がプロジェクトに存在しない場合は適用されないのでご注意ください。

@@ -27,3 +27,16 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+.features {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.featuresContainer {
+    margin: 0 auto;
+    min-width: 20rem;
+    padding: 1rem;
+    width: 100%;
+}
