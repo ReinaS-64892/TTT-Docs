@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'TexTransTool',
-  tagline: '非破壊テクスチャ改変ツール',
+  tagline: '非破壊テクスチャ改変ツール！',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -84,7 +84,7 @@ const config = {
             position: 'left',
             label: 'ドキュメント',
           },
-          {to: 'blog', label: 'ブログ', position: 'left'}, // or position: 'right'
+          { to: 'blog', label: 'ブログ', position: 'left' }, // or position: 'right'
           {
             type: 'localeDropdown',
             position: 'right',
@@ -105,6 +105,36 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/Tutorial/ReductionTextureMemoryByAtlasing',
+            from: ['/docs/Tutorial/AtlasTexture-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/SetupSimpleDecal',
+            from: ['/docs/Tutorial/SimpleDecal-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/SetupGradationToHair',
+            from: ['/docs/Tutorial/SingleGradationDecal-Tutorial']
+          },
+          {
+            to: '/docs/Tutorial/TextureModificationByPSD',
+            from: ['/docs/Tutorial/TTTPSDImporter-Tutorial']
+          },
+          {
+            to: '/docs/Reference/MultiLayerImageCanvas/YAxisFixedGradientLayer',
+            from: ['/docs/Reference/MultiLayerImageCanvas/YAsixFixedGradientLayer']
+          }
+        ],
+      }
+    ]
+  ]
 };
 
 export default config;

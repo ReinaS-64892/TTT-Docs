@@ -12,47 +12,35 @@ TexTransTool のコンポーネントはどの順番で実行されるかによ�
 
 ほとんどのコンポーネントには 実行するフェーズが存在します。
 
-TexTransPhase と表記されることもあり、下記5つによって構成されていて、上から順に実行されます。
+TexTransPhase と表記されることもあり、下記7つによって構成されていて、上から順に実行されます。
+
+### MaterialModification | マテリアル変更
+
+マテリアルを変更したり、それに伴ってテクスチャの参照を増やしうるコンポーネントが属するフェーズ
 
 ### BeforeUVModification | UV変更前
 
 UVに強い依存を持ち、UVの変更がなされた後では動作できないコンポーネントが属するフェーズ
 
-属するコンポーネント
-
-- [MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas)
-- [TextureBlender](/docs/Reference/TextureBlender)
-
 ### UVModification | UV変更
 
 UVを書き換えるようなコンポーネントが属すフェーズ
-
-現在属するコンポーネントは存在しませんが今後追加される可能性があります。
 
 ### AfterUVModification | UV変更後
 
 UVに依存がなく、UVが書き換えられたことによる影響がない、または受けれるコンポーネントが属するフェーズ。
 
-属するコンポーネント
+### PostProcessing | 後処理
 
-- [SimpleDecal](/docs/Reference/SimpleDecal)
+他色改変系が動作した後に、その情報を基に UV に依存しないテクスチャ処理を行うコンポーネントが属するフェーズ。
 
 ### Undefined | 未定義
 
 どのフェーズに属するべきかがケースバイケースであり、ユーザーが必要に応じて定義すべきなコンポーネントが属するフェーズ
 
-属するコンポーネント
-
-- [MaterialOverrideTransfer](/docs/Reference/MaterialOverrideTransfer)
-
 ### Optimizing | 最適化
 
-最適化を行う、早い段階で動く必要のないコンポーネントが属するフェーズ
-
-属するコンポーネント
-
-- [AtlasTexture](/docs/Reference/AtlasTexture)
-- [TextureConfigurator](/docs/Reference/TextureConfigurator)
+最適化を行う、早い段階で動く必要のない、または遅い段階で動いたほうが良いコンポーネントが属するフェーズ
 
 ## フェーズ内での実行順
 

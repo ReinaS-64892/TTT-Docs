@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import { TutorialCardElement } from '@site/src/components/TutorialCard';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -12,7 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-          <img src={require("@site/static/img/TTT_logo.png").default} alt={siteConfig.title} width="50%" />
+        <img src={require("@site/static/img/TTT_logo.png").default} alt={siteConfig.title}  />
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link sl
@@ -40,7 +40,11 @@ export default function Home() {
       description="TexTransTool Document Home">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <section className={styles.features}>
+          <div className={styles.featuresContainer}>
+            <TutorialCardElement />
+          </div>
+        </section>
       </main>
     </Layout>
   );
