@@ -125,7 +125,7 @@ TexTransTool のコア部分の書き換えに伴い、レンダリングパイ�
 これは SimpleDecal と SingleGradationDecal のレンダラー選択関連の共通化だね！
 これによって SimpleDecal でしかできなかったレンダラー直接指定が SingleGradationDecal でも使用できるようになったり、 SingleGradationDecal しかできなかった マテリアルベースでの選択が、 SimpleDecal でも使えるようになったんだ～！
 
-まぁこれによって SimpleDecal のデフォルト設定は結構土差が重くなっちゃったんだけど ... まぁ仕方ないね、今後もっと最適化するからそれで ...
+まぁこれによって SimpleDecal のデフォルト設定は結構動作が重くなっちゃったんだけど ... まぁ仕方ないね、今後もっと最適化するからそれで ...
 
 ---
 
@@ -133,7 +133,7 @@ TexTransTool のコア部分の書き換えに伴い、レンダリングパイ�
 
 ずーーーっと見落としていたバグ、気を付けようね！
 
---
+---
 
 > - TexTransTool の内部処理で使用される RenderTexture の Format を指定できる設定 InternalTextureFormat が `Tools/TexTransTool` に追加されました (#774)
 
@@ -158,7 +158,7 @@ NDMF Preview のための Scene を触ってしまったりと ... ちょっと�
 
 > - NDMF Preview にて 同一フェーズ に限り、 MaterialOverrideTransfer などのマテリアル改変系コンポーネントの影響でプレビュー範囲が変わるコンポーネントが正しい範囲で行われるようになりました (#806 #828 #830)
 
-実装によって遅くなったり無限ループしたりと、様々ったのだけど ... NDMF Preview の方からがうまくこの問題に対して対処出来たら ... うれしいなぁ
+実装によって遅くなったり無限ループしたりと、様々あったのだけど ... NDMF Preview の方からがうまくこの問題に対して対処出来たら ... うれしいなぁ
 
 まぁひとまずはこの同一フェーズに限りの特殊仕様を用いてプレビューできるようにしましょう！
 
@@ -197,7 +197,7 @@ SingleGradationDecal やそれで可能な SimpleDecal の使い方が非常に�
 
 > - IslandSelectorAND(NOT,OR,XOR) と Box(Sphere,Pin)IslandSelector が Experimental ではなく、 Stable としてマークされました (#848 #865)
 
-SingleGradationDecal　の安定化、実験的な機能を外れるに伴い IslandSelector も stable なものがないと困るので、ある程度歴史がある物の中で IslandSelector の実装が変わっても挙動が確実に変わらない存在をこのタイミングで安定的機能という扱いにすることにしました。
+SingleGradationDecal の安定化、実験的な機能を外れるに伴い IslandSelector も stable なものがないと困るので、ある程度歴史がある物の中で IslandSelector の実装が変わっても挙動が確実に変わらない存在をこのタイミングで安定的機能という扱いにすることにしました。
 
 ---
 
