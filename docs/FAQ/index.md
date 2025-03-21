@@ -67,3 +67,45 @@ TexTransTool に限らず、ツールのコンポーネントが SceneView に�
 そのアセットが古い TexTransTool のバージョンで作られた可能性があります。
 
 もしそうであれば、バックアップを取った後に[Migrator](/docs/Reference/EditorWindow/Migrator.md)を開き、マイグレーションを実行してみてください！
+
+## GTX10XX や GTX9XX 系の環境で正しく TTT が動作しない
+
+TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使用している環境で、UnityEditor が DirectX11 を使用している場合、以下のものは確実に正常動作しません。
+
+- SimpleDecal
+- SingeGradationDecal
+- TTT PSD Importer
+
+それらが正しく動作しないことが確認されている GPU にはこれらが存在します。[参考](https://github.com/ReinaS-64892/TexTransTool/issues/903)
+
+- GTX 1080
+- GTX 1070TI
+- GTX 1070
+- GTX 1060
+- GTX 980
+
+次期バージョンである TTT v0.10.0 にて[修正](https://github.com/ReinaS-64892/TexTransTool/issues/904)を予定していますが、一時的な回避策として Vulkan を使用することで回避できます。
+
+### UnityEditor を Vulkan で起動する
+
+:::warning
+上級者向けの設定を使用します！設定するときは細心の注意を払ってください！
+:::
+
+はじめに、 [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/) をなければインストールしてください。VCC では設定することができません！
+
+次に、プロジェクトの `管理` を開き `起動オプションの変更` をクリックしてください。  
+![faq-OpenChangeLaunchOption](img/faq-OpenChangeLaunchOption.png)
+
+そうしたら、このような画面が表示されるので、`コマンドライン引数をカスタマイズする` をクリック。  
+![faq-ChangeLaunchOption.png](img/faq-ChangeLaunchOption.png)
+
+新たに表示される `追加` ボタンを使用し  
+![faq-AddLaunchOption](img/faq-AddLaunchOption.png)
+
+`-force-vulkan` を追加すれば、次回起動時から UnityEditor が Vulkan を使用して起動するようになります！  
+![faq-AddForceVulkanToLaunchOption](img/faq-AddForceVulkanToLaunchOption.png)
+
+:::tip
+`デフォルトのコマンドライン引数を使用する` を使用するとデフォルト設定の戻すことができ、 Vulkan を使用して起動する設定を消すことができます。
+:::
