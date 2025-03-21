@@ -94,7 +94,7 @@ TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使
 
 はじめに、 [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/) をなければインストールしてください。VCC では設定することができません！
 
-次に、プロジェクトの `管理` を開き `起動オプションの変更` をクリックしてください。  
+次に、プロジェクトの `管理` を開き `起動オプションを変更` をクリックしてください。  
 ![faq-OpenChangeLaunchOption](img/faq-OpenChangeLaunchOption.png)
 
 そうしたら、このような画面が表示されるので、`コマンドライン引数をカスタマイズする` をクリック。  
@@ -103,7 +103,7 @@ TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使
 新たに表示される `追加` ボタンを使用し  
 ![faq-AddLaunchOption](img/faq-AddLaunchOption.png)
 
-`-force-vulkan` を追加すれば、次回起動時から UnityEditor が Vulkan を使用して起動するようになります！  
+`-force-vulkan` を追加し、`保存` すれば、次回起動時から UnityEditor が Vulkan を使用して起動するようになります！  
 ![faq-AddForceVulkanToLaunchOption](img/faq-AddForceVulkanToLaunchOption.png)
 
 :::tip
