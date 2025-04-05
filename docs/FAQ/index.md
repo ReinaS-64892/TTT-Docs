@@ -109,3 +109,10 @@ TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使
 :::tip
 `デフォルトのコマンドライン引数を使用する` を使用するとデフォルト設定の戻すことができ、 Vulkan を使用して起動する設定を消すことができます。
 :::
+
+## VMware にて TTT が動作しない
+
+確認された環境(`VMware(R) Workstation 17 Pro 17.6.2 build-24409262`)では、2つの RenderTexture の間で値をコピーするだけである `NotBlend` Blending すら動作しません。
+VMware の Driver との相性が非常に悪いのか VMware の ComputeShader 実装は TTT の使用に耐えられるものではないようです。
+
+根本的な解決方法は見つかりませんでした。他の TTT の使用に耐えられる ComputeShader 実装を持つ環境に変えてください。
