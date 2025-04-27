@@ -4,6 +4,10 @@
 
 [SimpleDecal](/docs/Reference/SimpleDecal) や [AtlasTexture](/docs/Reference/AtlasTexture)で、アイランド単位で何かを行うための、アイランドの選択用コンポーネント。
 
+:::info
+IslandSelector は通常(付与されている GameObjectを)無効化すると 何も選択していない IslandSelector としての振る舞いをするようになります。
+:::
+
 ## 選択コンポーネント
 
 ### BoxIslandSelector & SphereIslandSelector
