@@ -70,6 +70,10 @@ TexTransTool に限らず、ツールのコンポーネントが SceneView に�
 
 ## GTX10XX や GTX9XX 系の環境で正しく TTT が動作しない
 
+:::info
+TTT v0.10.0 にてこれらバグは修正されています！
+:::
+
 TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使用している環境で、UnityEditor が DirectX11 を使用している場合、以下のものは確実に正常動作しません。
 
 - SimpleDecal
