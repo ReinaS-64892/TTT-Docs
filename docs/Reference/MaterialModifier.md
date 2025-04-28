@@ -42,7 +42,11 @@ MaterialModifier は実験的なコンポーネントです！予告なく機能
 
 各プロパティに対する差分それそのものであり、実行時にこのリストの差分を適用します。
 
-## ReinaSakiria's-Note
+
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
+
 
 このコンポーネント(新版MaterialModifier)は TexTransTool v0.9.0 から追加されました。
 
@@ -55,3 +59,4 @@ PR の時点では `MaterialConfigurator` という名前でしたが、紆余�
 これはちょっとした余談ですが、そのマテリアルの本物のインスペクターを描画する都合で、そのマテリアルの持つインスペクターが重いと当然重たくなってしまうので、私のような人が使用している lilToon のインスペクターが重たいって話から、[lilToon へ PR](https://github.com/lilxyzw/lilToon/pull/244) を投げるなどがありました。
 
 この PR がマージされた lilToon v1.9.0 を導入しておくと MaterialModifier 上で操作するときも高速になるのでアップデート推奨です！
+</details>

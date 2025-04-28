@@ -16,6 +16,7 @@ ITTShaderTextureUsageInformation は実験的な機能です！予告なく機�
 
 実装する場合は ここらへんのソースコードを参考にしてください！
 
-- https://github.com/ReinaS-64892/TexTransTool/blob/5dfa65b2ef36723a7c2a19744f97c2a9f9c9fc4c/Runtime/TextureAtlas/ShaderTextureUsageInformation/TTShaderTextureUsageInformationRegistry.cs
+- https://github.com/Rei
+- naS-64892/TexTransTool/blob/5dfa65b2ef36723a7c2a19744f97c2a9f9c9fc4c/Runtime/TextureAtlas/ShaderTextureUsageInformation/TTShaderTextureUsageInformationRegistry.cs
 - https://github.com/ReinaS-64892/TexTransTool/blob/5dfa65b2ef36723a7c2a19744f97c2a9f9c9fc4c/Runtime/TextureAtlas/ShaderTextureUsageInformation/MaterialInformationTranslator.cs
 - https://github.com/ReinaS-64892/TexTransTool/blob/5dfa65b2ef36723a7c2a19744f97c2a9f9c9fc4c/Runtime/TextureAtlas/AAOCode/ShaderInformation.Liltoon.cs

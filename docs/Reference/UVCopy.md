@@ -22,8 +22,11 @@ UVCopy は実験的なコンポーネントです！予告なく機能変更や�
 
 基本的には UV1 などを指定して、 Shader 側で特殊な扱い方をすることが多いです。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 TTT v0.10.0 にて追加された、AtlasTexture の WriteOriginalUV の削除に伴って追加されたコンポーネントです。
 
 AtlasTexture よりも先行で動作させることで UV1 にアトラス化する前の UV を書き込んでおくようなことをするためにあります。
+</details>

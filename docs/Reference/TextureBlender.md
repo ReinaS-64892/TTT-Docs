@@ -42,7 +42,9 @@
 
 [詳細はこちら](/docs/Reference/Common/BlendTypeKey)
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 このコンポーネントは、[SimpleDecal](/docs/Reference/SimpleDecal) を作った時に、ついでに追加した 色合成機能 をそれ単体で切り出して使えるようにした物です。
 
@@ -54,3 +56,4 @@
 このコンポーネントの機能はこれ以上変わることはないでしょう、非常にシンプルかつ単純で一つの事しかできないですが、それがこのコンポーネントの良いところでもあると思います。
 
 それに、さらに高度なことをしたいのであれば、上位互換の [MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas) もありますから。
+</details>
