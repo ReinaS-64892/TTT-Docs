@@ -46,10 +46,13 @@ Texture の 2nd か 3rd を選択することができます。他の何らか�
 
 コンテキストメニューから生成した場合、 AimIslandSelector がデフォルトで生成されて割り当てられた状態になります。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 これは TexTransTool v0.9.0 から 実験的機能として追加されたコンポーネントです。
 
 [PR-#851](https://github.com/ReinaS-64892/TexTransTool/pull/851) にて作っては見たもの、このコンポーネントはテクスチャに対する編集は何一つ行われておらず、 TTT のテクスチャの改変という領域を大幅に逸脱していて、 [Issue-#850](https://github.com/ReinaS-64892/TexTransTool/issues/850) と一緒に別のツールに切り離すべきだと思っています。
 
 誰かマテリアルやメッシュを編集してシェーダーのためにいい感じの設定をする非破壊ツールを作ってこのコンポーネントを持って行ってくれる人が現れてくれることを願っています。
+</details>

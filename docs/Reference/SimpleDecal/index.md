@@ -172,7 +172,9 @@ sidebar_position: 7
 
 後者のエミッションの場合でも、エミッション用のプロパティを選択することで解決できますが、該当となるプロパティにテクスチャーが割り当てられていない場合適用されないのでご注意ください。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 [概要](#概要) に書いてあるようにこのコンポーネントの生まれは、[AtlasTexture](/docs/Reference/AtlasTexture) のために作成された UVtoUV技術 (内部名称`TransTexture`) の転用から始まり、この TexTransTool の色改変系機能として最初のコンポーネントとして、 TTT v0.1.0 から追加されました。
 
@@ -184,3 +186,4 @@ sidebar_position: 7
 それに、この SimpleDecal のために追加した色合成の技術も、またいくつかの転用を生み、もう一つの[主要な機能](/docs/Reference/MultiLayerImageCanvas)を生む原因となったのも ... また別のお話。
 
 ちなみに ... 今では転用として使用し始めたした Decal の方がこの技術をメインで使用しています。([AtlasTexture](/docs/Reference/AtlasTexture) は矩形移動だけで済んでしまったため、それのために作ったにもかかわらず、意味がなくなってしまっているがために (いずれ [AtlasTexture](/docs/Reference/AtlasTexture) も矩形移動で済まなくなれば話は変わりますが、まだそうではない))
+</details>

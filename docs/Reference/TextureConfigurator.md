@@ -50,7 +50,9 @@ MipMapを使用するか否かの設定です。
 プラットフォームに応じてフォーマットを細かく指定したい場合は、[VRCQuestTools](https://kurotu.github.io/VRCQuestTools/ja/) の [Platform GameObject Remover](https://kurotu.github.io/VRCQuestTools/ja/docs/references/components/platform-gameobject-remover/) などを使用することを推奨します。
 :::
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 この コンポーネントは TexTransTool v0.7.0 から追加されたコンポーネント。
 
@@ -59,3 +61,4 @@ MipMapを使用するか否かの設定です。
 行いたいことが非常に単純故、あまり遠くない未来に実験的である扱いを外したいですね！
 
 ですが、 TTT v0.9.0 開発時点(2025年02月06日)では TTT 内にダウンスケールに関するサブシステムがまだ整っておらず、そのあたりが整った先になりそうですね ...
+</details>

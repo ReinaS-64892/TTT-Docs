@@ -48,8 +48,11 @@ TexTransCoreEngine と言う TexTransTool の内部で使用されている Comp
 
 ここにある項目は、ReinaSakiria がデバッグように使用しているものであり、全て使用するときには注意してください。そしてそれら項目は、通常余儀なく変更される可能性が高いため気をつけてください。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 v0.10.0 から作られた EditorWindow で、今まで MenuItem にあったものをすべてここに集約した形になります。
 
 今後ここにちょっと便利な Utility を追加しようかなとも考えています。
+</details>

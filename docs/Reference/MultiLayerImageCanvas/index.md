@@ -28,7 +28,9 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 
 このキャンバスの結果で置き換える対象選択。[詳細](../Common/TextureSelector.md)
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 コンポーネントは TexTransTool v0.5.0 から [TTT PSD Importer](/docs/Reference/TexTransToolPSDImporter.md) のために追加されました。
 
@@ -37,3 +39,4 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 TexTransTool の順序制御は基本的に上から下ですが、このコンポーネントがレイヤーとして扱う存在は基本的に下から上の順に合成されていくので少し異質ですね。
 
 このコンポーネントとそれに連なるレイヤー群に関しては様々あるんですが ... それは [こっちのノート](/docs/Reference/TexTransToolPSDImporter.md#reinasakirias-note)に書いておきましょう。
+</details>
