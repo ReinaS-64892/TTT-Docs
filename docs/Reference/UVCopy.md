@@ -8,6 +8,12 @@ UVCopy は実験的なコンポーネントです！予告なく機能変更や�
 
 指定したメッシュの UV を別のチャンネルの UV にコピーできる存在です。
 
+## 属性
+
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+- フェーズ -> [UVModification | UV変更](/docs/Reference/General/ExecutionOrder.md#uvmodification--uv変更)
+
 ## 設定項目
 
 ### CopySource

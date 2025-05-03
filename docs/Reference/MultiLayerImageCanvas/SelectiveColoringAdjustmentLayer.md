@@ -12,6 +12,11 @@ SelectiveColoringAdjustmentLayer は実験的なコンポーネントです！�
 
 一般的な画像編集ソフトの 特定色域の選択の色調補正 と対応するものです
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

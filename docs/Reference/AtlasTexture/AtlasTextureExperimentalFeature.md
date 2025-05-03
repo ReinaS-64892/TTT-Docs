@@ -10,6 +10,11 @@ AtlasTexture に実装された 実験的な機能を呼び出すことができ
 
 AtlasTexture の付与された GameObject に AddComponent することで設定可能になります。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [AnnotationComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 ### 自動テクスチャサイズ設置

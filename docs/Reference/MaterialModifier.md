@@ -10,6 +10,8 @@ MaterialModifier は実験的なコンポーネントです！予告なく機能
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [MaterialModification | マテリアル変更](/docs/Reference/General/ExecutionOrder.md#materialmodification--マテリアル変更)
 
 ## 設定項目

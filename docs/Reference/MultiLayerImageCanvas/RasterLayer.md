@@ -12,6 +12,11 @@ RasterLayer は実験的なコンポーネントです！予告なく機能変�
 
 Texture2D をそのままレイヤーとして使用できるコンポーネントです。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

@@ -12,6 +12,8 @@ sidebar_position: 7
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [AfterUVModification | UV変更後](/docs/Reference/General/ExecutionOrder.md#afteruvmodification--uv変更後)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 

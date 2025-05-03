@@ -12,6 +12,10 @@ DomainDefinition は実験的なコンポーネントです！予告なく機能
 [TTT-WorldExtension](https://github.com/ReinaS-64892/TTT-WorldExtension) にて効果を発揮することがあります。
 :::
 
+## 属性
+
+- [AnnotationComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ---
 <details>
   <summary>**ReinaSakiria's-Note**</summary>

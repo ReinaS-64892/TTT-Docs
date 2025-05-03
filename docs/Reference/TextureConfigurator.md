@@ -10,6 +10,8 @@ TextureConfigurator は実験的なコンポーネントです！予告なく機
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [Optimizing | 最適化](/docs/Reference/General/ExecutionOrder.md#optimizing--最適化)
 
 ## 設定項目
