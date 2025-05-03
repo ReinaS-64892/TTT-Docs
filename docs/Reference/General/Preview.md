@@ -6,7 +6,7 @@ sidebar_position: 3
 
 :::warning
 VRChatAvatar の環境で、 NDMF が存在する場合は、こちらの [NDMF Preview](/docs/Reference/General/NDMFPreview.md) を参照してください。  
-これらの項目は NDMF Preview が使用される場合使用され無い機能についてのリファレンスです。
+これらの項目は NDMF Preview が使用される場合、使用されない機能についてのリファレンスです。
 :::
 
 TexTransTool のコンポーネントにおいて、一時的にそのコンポーネントの実行結果を適用する機能
