@@ -16,6 +16,12 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 一般的な画像編集ソフトやお絵かきソフトのキャンバスを再現し、高度な色改変をUnity内で行う  
 [SimpleDecal](/docs/Reference/SimpleDecal)のために作られた色合成技術を転用して作られたコンポーネント。
 
+## 属性
+
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+- フェーズ -> [BeforeUVModification | UV変更前](/docs/Reference/General/ExecutionOrder.md#beforeuvmodification--uv変更前)
+
 ## レイヤーの定義
 
 - MultiLayerImageCanvas の子のゲームオブジェクトで1階層目であること

@@ -10,6 +10,8 @@ UV1~3 に書き込み、 lilToon の Decal化 設定を使用することで、V
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [MaterialModification | マテリアル変更](/docs/Reference/General/ExecutionOrder.md#materialmodification--マテリアル変更)
 
 ## 設定項目

@@ -8,6 +8,11 @@
 IslandSelector は通常(付与されている GameObjectを)無効化すると 何も選択していない IslandSelector としての振る舞いをするようになります。
 :::
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 選択コンポーネント
 
 ### BoxIslandSelector & SphereIslandSelector

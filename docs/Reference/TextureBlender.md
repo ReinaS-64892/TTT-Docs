@@ -6,6 +6,8 @@
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [BeforeUVModification | UV変更前](/docs/Reference/General/ExecutionOrder.md#beforeuvmodification--uv変更前)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 

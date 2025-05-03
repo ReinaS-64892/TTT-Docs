@@ -13,6 +13,11 @@ UnityGradationMapLayer は実験的なコンポーネントです！予告なく
 一般的な画像編集ソフトではグラデーションマップと呼ばれている物と近い物です。
 グラデーションの制御にはUnity標準の物が使用されます。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

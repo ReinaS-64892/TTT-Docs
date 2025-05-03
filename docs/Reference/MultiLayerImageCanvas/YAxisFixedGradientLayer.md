@@ -12,6 +12,11 @@ YAxisFixedGradientLayer は実験的なコンポーネントです！予告な�
 
 画像の縦軸長さ固定グラデーションのレイヤーです。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting)の設定を持ちます。

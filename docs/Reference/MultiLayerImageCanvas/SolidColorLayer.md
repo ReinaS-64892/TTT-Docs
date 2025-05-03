@@ -12,6 +12,11 @@ SolidColorLayer は実験的なコンポーネントです！予告なく機能�
 
 一般的な画像編集ソフトのべたぬりレイヤーと対応するレイヤーです。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

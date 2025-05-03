@@ -13,6 +13,10 @@ IsActiveInheritBreaker は実験的なコンポーネントです！予告なく
 このコンポーネントを使用しなくてよいセットアップをすることを推奨します。
 :::
 
+## 属性
+
+- [AnnotationComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 影響を与える対象
 
 ### 通常コンポーネントすべて

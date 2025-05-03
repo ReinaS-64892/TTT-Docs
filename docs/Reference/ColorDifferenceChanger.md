@@ -12,6 +12,8 @@ ColorDifferenceChanger は実験的なコンポーネントです！予告なく
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [PostProcessing | 後処理](/docs/Reference/General/ExecutionOrder.md#postprocessing--後処理)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 

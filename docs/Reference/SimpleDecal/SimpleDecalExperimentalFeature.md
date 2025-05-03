@@ -4,6 +4,11 @@
 SimpleDecalExperimentalFeature は実験的なコンポーネントです！予告なく機能変更や削除がされる可能性があります。
 :::
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [AnnotationComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 概要
 
 SimpleDecal に実装された 実験的な機能を呼び出すことができる設定項目を追加するコンポーネントです。
