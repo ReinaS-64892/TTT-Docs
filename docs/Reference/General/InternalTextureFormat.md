@@ -1,4 +1,4 @@
-# InternalTextureFormat
+# 内部レンダーテクスチャーフォーマット
 
 TexTransTool のテクスチャ処理にあたって、内部で使用されるフォーマットの設定です。
 

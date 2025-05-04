@@ -26,7 +26,7 @@ TexTransTool は 日本語(ja-JP) と 英語(en-US) のみサポートします�
 
 ここの設定は、その Unity Project でのみ設定値が影響します。
 
-### 内部レンダーテクスチャーフォーマット
+### [内部レンダーテクスチャーフォーマット](/docs/Reference/General/InternalTextureFormat)
 
 TexTransTool がテクスチャを処理、加工する時に使用するレンダーテクスチャのフォーマットが指定可能な設定で、下の物(bit 数が大きい物) のほうが高精度な結果になりますが、その代わり TexTransTool の実行時に使用する VRAM や RAM などの使用量が 4倍、16倍 などになります。
 
