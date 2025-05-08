@@ -12,6 +12,8 @@ NearTransTexture は実験的なコンポーネントです！予告なく機能
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [PostProcessing | 後処理](/docs/Reference/General/ExecutionOrder.md#postprocessing--後処理)
 
 ## 設定項目
@@ -24,7 +26,9 @@ NearTransTexture は実験的なコンポーネントです！予告なく機能
 
 `レンダラー`と`マテリアルスロット`を指定し、`プロパティネーム`からにじませるようなテクスチャを書き込む先のテクスチャを指定し、にじませる対象となるポリゴンを指定する設定です。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 TexTransTool v0.9.0 から追加された、実験的なコンポーネント。
 
@@ -33,3 +37,4 @@ TexTransTool v0.9.0 から追加された、実験的なコンポーネント。
 
 インターフェースが非常に整っておらず、技術検証に成功して動くようになったレベルのクオリティのコンポーネントで、
 高確率でマイグレーションなしでセーブデータが破壊されうる実験的な存在なので使うときはそれを覚悟してから使ってくださいね！
+</details>

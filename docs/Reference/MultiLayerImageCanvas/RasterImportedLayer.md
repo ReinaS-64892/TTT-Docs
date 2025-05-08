@@ -12,6 +12,11 @@ RasterImportedLayer は実験的なコンポーネントです！予告なく機
 
 [TTT PSD Importer](/docs/Reference/TexTransToolPSDImporter)などからインポートされたラスターレイヤーデータを使用するためのレイヤーです。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

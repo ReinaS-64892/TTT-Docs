@@ -10,6 +10,8 @@ MaterialModifier は実験的なコンポーネントです！予告なく機能
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [MaterialModification | マテリアル変更](/docs/Reference/General/ExecutionOrder.md#materialmodification--マテリアル変更)
 
 ## 設定項目
@@ -30,11 +32,23 @@ MaterialModifier は実験的なコンポーネントです！予告なく機能
 
 [Is Override Shader](#is-override-shader) が有効な場合に、上書きするシェーダーです。
 
+#### Is Override Render Queue
+
+この項目が有効な場合 [Override Render Queue](#override-render-queue) に Render Queue が上書きされます。
+
+#### Override Render Queue
+
+[Is Render Queue](#is-override-render-queue) が有効な場合に、上書きするシェーダーです。
+
 #### OverrideProperties
 
 各プロパティに対する差分それそのものであり、実行時にこのリストの差分を適用します。
 
-## ReinaSakiria's-Note
+
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
+
 
 このコンポーネント(新版MaterialModifier)は TexTransTool v0.9.0 から追加されました。
 
@@ -43,3 +57,8 @@ MaterialModifier は実験的なコンポーネントです！予告なく機能
 PR の時点では `MaterialConfigurator` という名前でしたが、紆余曲折(目的自体は 旧版MaterialModifier と同一だったというのも)あって 旧版MaterialModifier から名前を継承する形になっています。
 
 旧版MaterialModifier のプロパティ名を調べないと何にもできない非常に使いずらい仕様とは違って、マテリアルの本物のインスペクターが描画されるようになっており、非常に使い勝手の良いコンポーネントでかつ、現時点である程度完成していると思うので、あんまり遠くないうちに 実験的な扱いを外したいとも考えています。
+
+これはちょっとした余談ですが、そのマテリアルの本物のインスペクターを描画する都合で、そのマテリアルの持つインスペクターが重いと当然重たくなってしまうので、私のような人が使用している lilToon のインスペクターが重たいって話から、[lilToon へ PR](https://github.com/lilxyzw/lilToon/pull/244) を投げるなどがありました。
+
+この PR がマージされた lilToon v1.9.0 を導入しておくと MaterialModifier 上で操作するときも高速になるのでアップデート推奨です！
+</details>

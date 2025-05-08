@@ -30,7 +30,9 @@ TexTransToolPSDImporter は実験的な機能です！予告なく機能変更�
 
 エクスポートするアプリケーションで互換性を保持する設定などが有効な場合、これら以外のレイヤーがラスターレイヤーとしてインポートできることがあります。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 この機能は TexTransTool v0.5.0 から追加されました。
 
@@ -55,3 +57,4 @@ TexTransToolPSDImporter は実験的な機能です！予告なく機能変更�
 このインポーターと再現するための実装は、ペイントツールでは実現不可能な、いかなるペイントツールの PSD も再現することと、その再現実装を用いて、非破壊で高度な PSD を取り回し、強力な利便性を実現することです。
 
 そのため、 このインポーターとその再現実装([MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas))で再現出来なかった PSD は私(Reina_Sakiria)に連絡するか私がそれを検証できるような状態にしてくれると非常に助かります。
+</details>

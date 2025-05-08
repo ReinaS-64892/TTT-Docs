@@ -16,6 +16,12 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 一般的な画像編集ソフトやお絵かきソフトのキャンバスを再現し、高度な色改変をUnity内で行う  
 [SimpleDecal](/docs/Reference/SimpleDecal)のために作られた色合成技術を転用して作られたコンポーネント。
 
+## 属性
+
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+- フェーズ -> [BeforeUVModification | UV変更前](/docs/Reference/General/ExecutionOrder.md#beforeuvmodification--uv変更前)
+
 ## レイヤーの定義
 
 - MultiLayerImageCanvas の子のゲームオブジェクトで1階層目であること
@@ -28,7 +34,9 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 
 このキャンバスの結果で置き換える対象選択。[詳細](../Common/TextureSelector.md)
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 コンポーネントは TexTransTool v0.5.0 から [TTT PSD Importer](/docs/Reference/TexTransToolPSDImporter.md) のために追加されました。
 
@@ -37,3 +45,4 @@ MultiLayerImageCanvas は実験的なコンポーネントです！予告なく�
 TexTransTool の順序制御は基本的に上から下ですが、このコンポーネントがレイヤーとして扱う存在は基本的に下から上の順に合成されていくので少し異質ですね。
 
 このコンポーネントとそれに連なるレイヤー群に関しては様々あるんですが ... それは [こっちのノート](/docs/Reference/TexTransToolPSDImporter.md#reinasakirias-note)に書いておきましょう。
+</details>

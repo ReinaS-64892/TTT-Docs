@@ -17,6 +17,7 @@ sidebar_position: 2
 ## 属性
 
 - 順序制御系
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 
 ## 範囲
 

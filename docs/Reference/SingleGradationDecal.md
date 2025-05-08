@@ -6,6 +6,8 @@
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [AfterUVModification | UV変更後](/docs/Reference/General/ExecutionOrder.md#afteruvmodification--uv変更後)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 
@@ -76,7 +78,9 @@
 
 [SimpleDecal](/docs/Reference/SimpleDecal)の[詳細設定](/docs/Reference/SimpleDecal#詳細設定)と共通です。 [参照](/docs/Reference/SimpleDecal#詳細設定)
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 このコンポーネントは、[SimpleDecal](/docs/Reference/SimpleDecal) にて行われていた、グラデーションの適用をもっと簡単に(そして手っ取り早く)するために作成し、TTT v0.7.0 から追加されました。
 
@@ -88,3 +92,4 @@
 ですがその設計によって、少ない設定項目で高い拡張性を持つ範囲指定ができるようになったため、それもそれでよかったかなと 私(Reina_Sakiria)は思います。
 
 ちなみに、この `SingleGradationDecal` はマテリアル指定で大雑把な指定を行いますが、この仕組みはデカールを完全にモジュールとして切り離すことを可能にするという気づきをもたらし、 TTT v0.9.0 から [SimpleDecal](/docs/Reference/SimpleDecal) もマテリアルベースで大雑把な指定を行えるように逆輸入(それと共通化)が起きてたりもします。
+</details>

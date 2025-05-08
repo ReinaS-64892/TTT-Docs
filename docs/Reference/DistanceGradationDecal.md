@@ -10,6 +10,8 @@ DistanceGradationDecal は実験的なコンポーネントです！予告なく
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [AfterUVModification | UV変更後](/docs/Reference/General/ExecutionOrder.md#afteruvmodification--uv変更後)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 
@@ -27,10 +29,13 @@ DistanceGradationDecal は実験的なコンポーネントです！予告なく
 
 グラデーションの右側にある距離の設定です。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 このコンポーネントは TexTransTool v0.9.0 から実験的な機能として追加されました。
 
 SingleGradationDecal を距離ベースに変えただけのものでこれと言って特別なものはないですが、グラデーションのかかる形状が変わります。何か円形状にグラデーションをかけたいときには使えるかもしれないですね。
 
 適当に作ってみただけの物であり、「使用者が少ない」または「いない」場合はしばらくしたら「消えてる」 or 「完全放置」になる可能性が高いです。
+</details>

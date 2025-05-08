@@ -14,6 +14,11 @@ GIMP の着色 と同じ効果を持つレイヤー。
 
 元の色の、 Luminance をいい感じに引き継ぎ、色相と彩度を置き換えます。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

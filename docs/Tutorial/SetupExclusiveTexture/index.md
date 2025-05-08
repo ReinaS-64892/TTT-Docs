@@ -29,13 +29,14 @@ sidebar_position: 1
 このような空っぽの `TTT TextureBlender` が表示されていれば次に進みましょう。  
 ![set-EmptyTextureBlender](img/set-EmptyTextureBlender.png)
 
+:::info
+このチュートリアルの画像は開発中の TexTransTool の物で、概ね同じなので適宜読み替えてください！(以下 v0.10.0 の画像)  
+![set-Inspector](img/set-Inspector.png)
+:::
+
 次に 導入する専用テクスチャー に応じた テクスチャー を選択しましょう！  
 このチュートリアルで導入数テクスチャーは Eyeテクスチャー なので 顔のテクスチャー を選択します。  
 ![set-SelectTargetTexture](img/set-SelectTargetTexture.png)
-
-:::info
-このチュートリアルの画像は、開発中の TexTransTool の物で、一部表示が英語の物があります。
-:::
 
 選択したら真っ白になっていることでしょう、この状態になっていれば正常なので次に進みます。
 ![set-White](img/set-White.png)

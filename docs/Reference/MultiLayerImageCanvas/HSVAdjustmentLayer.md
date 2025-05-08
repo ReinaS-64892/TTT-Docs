@@ -12,6 +12,11 @@ HSVAdjustmentLayer は実験的なコンポーネントです！予告なく機�
 
 クリスタの 色相・彩度・輝度 の調整 と対応するレイヤーです。
 
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 設定項目
 
 [GeneralCommonLayerSetting](./GeneralCommonLayerSetting.md)の設定を持ちます。

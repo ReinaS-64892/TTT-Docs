@@ -1,12 +1,12 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # リアルタイムプレビュー
 
 :::warning
 VRChatAvatar の環境で、 NDMF が存在する場合は、こちらの [NDMF Preview](/docs/Reference/General/NDMFPreview.md) を参照してください。  
-これらの項目は NDMF Preview が使用される場合使用され無い機能についてのリファレンスです。
+これらの項目は NDMF Preview が使用される場合、使用されない機能についてのリファレンスです。
 :::
 
 TexTransTool の一部のコンポーネントに限り、リアルタイムにコンポーネントをプレビューできる機能
