@@ -129,8 +129,4 @@ VMware の Driver との相性が非常に悪いのか VMware の ComputeShader 
 
 ## TTCE-Wgpu って何？
 
-[github repository](https://github.com/ReinaS-64892/TTCE-Wgpu)
-
-これは TexTransCore にある ComputeShader の抽象化レイヤー実装で、当然 Unity の  API を使って その抽象化レイヤーの実装が TexTransTool には存在するため、通常必要のない存在です。
-
-TexTransTool の資産のライフタイムを Unity とバインドしないため、そして、私のメイン環境が Linux に移動した都合で Vulkan をゴリ押しで使うため、他に手段がないゆえに実用化された存在です。
+[こちらを参照](/docs/TexTransTool-ExtensionPackages/TTCE-Wgpu)
