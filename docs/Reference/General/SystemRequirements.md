@@ -3,7 +3,7 @@
 - UnityEditor が動作可能な環境であること
 - ComputeShader が動作する GraphicsAPI が提供されていること ( OpenGL を除く )
   - (windows) DirectX 11 (機能レベル 11) 以上を実装する GPU がある環境 (例えば RTX 2060SP, RTX 3060)
-  - (linux) vulkan を実装する GPU がある環境 (例えば RX 6700XT)
+  - (linux) Vulkan を実装する GPU がある環境 (例えば RX 6700XT)
   - (Mac) Metal が動作する環境 (開発者による検証は行われていません。)
   - (windows or linux)(noGPU) LLVMpipe などにより Vulkan の実装がある環境
 
@@ -17,6 +17,10 @@ Linux 環境では VRCSDK によって OpenGL に固定されますが、それ�
 
 - (Windows) 特記事項はありません。
 - (Mac) Metal を使用してください。誤って OpenGL にしないように気をつけてください。
+
+### Editor(OpenGL)でも動作させたい場合は
+
+[TexTransCoreEngine バックエンド](/docs/Reference/EditorWindow/TTT-Menu.md#textranscoreengine-バックエンド) - [TTCE-Wgpu](/docs/FAQ#ttce-wgpu-って何)
 
 ## OpenGL の非推奨について
 
