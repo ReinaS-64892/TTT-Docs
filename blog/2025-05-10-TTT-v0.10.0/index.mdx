@@ -1,0 +1,215 @@
+---
+title: TexTransTool v0.10.0 について
+description: TTT v0.10.0 にて行われた様々なアップデートや変更などを適当に書いたよ！
+authors: ReinaSakiria
+tags: [Update]
+---
+
+```mdx-code-block
+<iframe width="640px" height="360px" src="https://www.youtube.com/embed/kE0kumGEO48" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+こんにちは！ Reina_Sakiria です！
+
+v0.9.0 に引き続き Changelog の詳細な解説を適用にやってゆこうかな〜！
+
+すべてを一覧したい人はこっち〜
+
+- [CHANGELOG.md](https://github.com/ReinaS-64892/TexTransTool/blob/daba77d38dfb1fd6a702a67287f03a82466c4e39/CHANGELOG.md#v0100---2025-05-14)
+- [CHANGELOG-EXPERIMENTAL.md](https://github.com/ReinaS-64892/TexTransTool/blob/daba77d38dfb1fd6a702a67287f03a82466c4e39/CHANGELOG-EXPERIMENTAL.md#v0100---2025-05-14)
+
+## 変更点について
+
+今回の主となる AtlasTexture の話しから！
+
+>- AtlasTexture の LimitCandidateMaterials は削除されました (#923)
+
+これ使ってる人いるの ... ? 私は使ってなかった。
+
+>- AtlasTexture の MergeReference に対して割り当てられていた場合にも置き換えが登録されるようになり、アトラス化後のマテリアルを対象にコンポーネントが動作可能になりました (#900)
+
+これによって MaterialModifier などがマージ後のマテリアルなどに動作できるようになったから、もっと細かく調整できるかも ... ?
+
+>- AtlasTexture がアトラス化するとき、大幅に重なったアイランドが、結合可能なときは結合されて扱われるようになりました (#900)
+
+これにより以前よりも再配置後の配置効率が上がると思う。
+
+>- AtlasTexture TextureFineTuning の MipMapRemove は廃止され、 MiMap が追加されました (#900)
+
+名称が分かりづらいし、今後のために少し命名を変える必要がありました。
+MipMap を削除したいときは、この MipMap から UseMipMap を false にするようにね！
+
+>- AtlasTexture MergeMaterial は削除され、割り当てたときに、すべてのマテリアルをそれに結合する AllMaterialMergeReference に変更されました (#900)
+>- AtlasTexture MargeMaterialGroup が stable としてマークされました (#900)
+
+マテリアル結合周辺の大幅な変更に伴い Group の stable 化も同時に行われたよ！
+具体的に挙動の変更は、結合時参照を設定しないとマージができないような仕様になったという側面がある。不定に頼らないこと。
+
+>- AtlasTexture の TextureFineTuning の初期設定が NormalMap などを考慮に入れた設定になりました (#900)
+
+いくらか lilToon 向けのノーマルマップ周辺の調整 (例えば NormalMap を リニア なテクスチャにさせたりなど) がデフォルトで生成されるようになったから、以前よりも初期設定で見た目が維持されやすいかも！
+
+>- AtlasTexture が非正方形なテクスチャを対象にアトラス化したときに Padding の計算が正しく行えていない問題を修正しました (#900)
+
+VRoid系が踏みまくっていたこのバグは、再実装に伴い解決しました。やったね！
+
+>- AtlasTexture の "_MainTex" 以外のプロパティに自動的に最大サイズを割り当てる機能は削除されました (#900)
+>- (Experimental) AtlasTexture に アトラス化対象のテクスチャの最大サイズを割り当てる AutoTextureSizeSetting が追加されました (#900)
+
+以前は自動で設定していたんだけど、邪魔になることが多かったから実験的機能に戻しました。そもそもこの自動サイズ調整はデフォルトの TextureFineTuning を消さないと出てこないからまず機能してなかったというのもあるし ...
+
+>- (Experimental) AtlasShaderSupport は削除されました (#900)
+>- (Experimental) AtlasShaderSupport の代わりに ITTShaderTextureUsageInformation が追加されました (#900)
+
+AtlasTexture にアトラスか可能な対象を明示するとともに焼き込みの処理をも行う AtlasShaderSupport は削除されて、 ITTShaderTextureUsageInformation という AAO の ShaderInformation のほぼパクリ API で アトラスか可能な対象の明示のみを行う存在になったよ！
+
+そもそもね、 ScriptableObject で、あの無限にフリーダムしてくれる Shader の焼き込みを表現しようなどということが無茶だったんですよ。そんなわけで、 AAO の ShaderInformation を少しいじるだけで対応できる ITTShaderTextureUsageInformation に代わりました。
+
+でもそれだと lilToon とかのテクスチャの焼き込みが行えなくなったわけだけど、その焼き込みを行う別のツール  
+[ReinaS'lilToonNDMFUtility](https://github.com/ReinaS-64892/ReinaS-lilToonNDMFUtility) に `LNU lilToonMaterialNormalizer` として移動したから気をつけてね！
+
+それと v0.9.0 からのマイグレーション時に [ReinaS'lilToonNDMFUtility](https://github.com/ReinaS-64892/ReinaS-lilToonNDMFUtility) が存在する場合は `LNU lilToonMaterialNormalizer` を自動で追加するマイグレーションが走るから `AtlasTexture` の `BakeProperty` を使用している人は Project に追加することを推奨するよ！
+
+>- AtlasTexture BakeProperty は削除されました。代わりとなる機能は ドキュメントを参照してください。 (#900)
+
+まぁそういうことで `BakeProperty` は削除されました！
+
+TTT v0.9.0 から内部実装の Unity からの切り離しの都合もあり、ほかシェーダーの再現を TTT のサブシステム上でやりづらくなったのもあってね。
+
+>- (Experimental) AtlasTexture WriteOriginalUV と OriginalUVWriteTargetChannel は削除されました (#900)
+
+AtlasTexture がやる必要がないから`TTT UVCopy` に移動よ〜！！！
+
+---
+
+>- TexTransTool のコードの Core である部分が TexTransCore に移動し、TexTransCore に依存するようになりました。 (#888)
+
+これはね、TTCE-Wgpu などの都合もあって C# generic な部分の実装を全部別のレポジトリに移動しました！
+まぁ通常開発側にならなければ特に何変わらないから機にしなくていいよ。
+
+---
+
+>- DirectX11 環境で GTX10 や GTX9 系で様々なコンポーネントが正常に動作しない問題を修正しました (#929)
+
+これ私が `RTX 2060SP` 環境で開発していたのものあって全く壊れていることに気づけなかったんですよね、まぁ DirectX11 の API のドキュメントを見てみると壊れることが自明にわかる実装をしていたので `RTX 2060SP` がなぜか動いてしまっていたというのが正しいべきなんだけど、そのあたりの API の扱いを修正して正常に動作するようになったよ！
+
+(これ正しくバリデーションをしていない Unity の責任である説はある気がしてきたけど ... まぁええか)
+
+---
+
+>- TexTransTool の Project に対する設定 (例えば言語設定など) が `Tools/TexTransTool/Menu` から開くことが可能な Window に移動しました (#932)
+
+`Tools/TexTransTool/*` にあった設定項目を Menu に移動しました。
+
+ここの Menu の項目って動的に追加する手段がないから楽に実装できる代わりに結構扱いづらいのよね、なので全部べつの EditorWindow に移動する形になりました。
+
+(これによって言語の追加が動的に行えるようになって Happy!)
+
+---
+
+>- TextureBlender などの テクスチャ選択の部分での選択モード Relative は削除され Absolute だけになりました (#938)
+
+これを有効に使ってるケースが、少なくとも私にはないし v1.0.0 に向けて変な機能は削っていく方針なので、消されました。
+
+---
+
+>- Decal系の HighQualityPadding は削除されました (#939)
+
+死ぬほど重たいし、いずれ 常に HighQualityPadding のレベルにするから。
+
+---
+
+>- TexTransGroup は削除されました (#941)
+>- TexTransGroup の削除に伴い、PhaseDefine 配下にないコンポーネントは上から順にフェーズごとに実行される、TexTransGroup が存在するときと同様の実行順になるように変更されました (#941)
+
+元々不定の扱いをしていたのは、今後の最適化のためではあるもののあまり意味がないだろうと判断したのでその使用を削除、それに伴い TexTransGroup も削除されたよ！
+
+基本は上から順の実行であることは覚えておこうね！
+
+---
+
+>- NormalMap は TTT の内部では常に RG で扱われるようになりました (#943)
+
+ダウンスケーリングアルゴリズムがアルファを見る関係で GA にノーマルの情報を詰められると困るのですよ！
+そんなわけで最終的な圧縮時にいくらかなんとかするようにして、 TTT の内部では NormalMap を常に RG にするようになったんだ〜 まぁ内部的な話で通常知らなくていいことだけどね！
+
+---
+
+>- IslandSelector は、実行化時に無効化されていた場合に、無効化されるようになりました (#945)
+
+TTT のコンポーネントがだいたい持つ法則に合わせるようにしました。
+
+ただ無効化されている時に AND する時にスキップされているわけではなく、何も選択していないセレクター状態になってるからあまり良くない状態なのよね ... バグと行ってもいいからしばらくしたら修正されてるかも。
+
+---
+
+>- TexTransTool に 日本語と英語 以外の言語を追加できる API が追加されました (#959)
+
+とある [PullRequest](https://github.com/ReinaS-64892/TexTransTool/pull/956) で `中国語 (簡体字)` って言うのかな？ 言語の追加のの提案があったのだけど、私が `日本語` ギリ ... ? `英語` しかできないから、それ以外の対応をするのはコスト的に重いからこれをマージはできなかったんだ。
+
+でも、ほか言語での使用を禁じたいわけでもないから、 TTT 唯一の Stable な Public API として言語の追加をできるようにしたよ！
+
+---
+
+>- NDMF の対応バージョンが v1.7.0 以上に変更 (#962)
+>- TexTransTool が NDMF によるビルドの場合に Animation によって追加されるマテリアルに対して ほぼすべてのコンポーネントが影響を与えられるようになりました (#962)
+>- TexTransTool が NDMF によるビルドの場合に MA MaterialSetter によって追加されるマテリアルに対して ほぼすべてのコンポーネントが影響を与えられるようになりました (#965)
+
+NDMF v1.7.0 にて追加された アニメーションのAPI を用いて、 TTT のコンポーネントがアニメーションに存在するマテリアルへ影響を与えられるようになったよ！それと、 MA MaterialSetter の方にも。
+
+これらの実装は PR によって提供されてるよ、Thank you [Ao_425](https://github.com/Tliks)!
+
+---
+
+>- インスペクターから 実験的機能の警告 や VRAMに影響を与えることを示すIcon などの表示を非表示にできる設定が追加されました(非表示にできるだけであり、実態には何ら影響しません) (#963)
+
+[Ao_425](https://github.com/Tliks) さんによる PR で提供されてるよ、ただ表示消すだけだからそれによって起こることには気をつけるようにね！
+
+---
+
+これ以下はすべて Changelog-Experimental だよ！
+
+---
+
+>- AtlasTexture の持つ実験的機能のほぼすべてが AtlasTextureExperimentalFeature に移動しました (#900)
+>- SimplDecal の持つ実験的機能のすべてが SimpleDecalExperimentalFeature に移動しました (#924)
+
+v1.0.0 に向けて、マイグレーションの仕組みの都合で別のコンポーネントに切り離す必要があったんだ ... まぁそういうこと！
+
+---
+
+>- MaterialModifier の Utility などで Shader の変更が加味されていなかった問題が修正されました (#921)
+>- MaterialModifier が RenderQueue をオーバーライドできるようになりました (#922)
+
+PR by [Ao_425](https://github.com/Tliks)！
+
+そういえば MaterialModifier はまだもう少しいじりたいところはありますよね！
+
+---
+
+>- TTT UVCopy という UV をコピーすることが可能なコンポーネントが追加されました (#926)
+
+`AtlasTexture` の `WriteOriginalUV` の代替として生まれたコンポーネントです。 TTT v1.0.0 に向けて AtlasTexture から切り離された存在とも言えます。
+
+これと MaterialModifier を使用することで NormalMap2nd などに UV1 を使わせる形で移して AtlasTexture の対象外にするみたいなことがやりやすくなるね！
+
+---
+
+>- TTCE-Wgpu がプロジェクトに存在する時に TTT の ConfigMenu から Backend として Wgpu を選択することが可能になりました (#934)
+
+TexTransCore へと分離したおかげで Package として存在が可能になった TTCE-Wgpu を実用できるように、 Config から操作できるようになったんだ〜！
+これで Linux + NVIDIA GPU + UnityEditor + OpenGL の環境で無理やり TexTransTool を正常に動作させることができる...!
+
+---
+
+>- IslandSelector や AtlasTexture のターゲティングに IsActiveInheritBreaker が干渉できるようになりました (#945)
+
+`IsActiveInheritBreaker` をいくらか他の場合でも影響するようになったよ！まぁ使いすぎには注意ね！
+
+## まとめと今後
+
+今回の Update は v1.0.0 に向けた機能の整理の側面がかなり強いです。それと、AtlasTexture を v0.9.0 から使用している TTT の独自エンジンでの再実装。
+
+その整理の都合で別コンポーネントに行ったり、別のツールに行ったり ... はたまた削除されたり。でも、もう stable とマークしたコンポーネントに破壊が来るのはこれが最後でしょう。次のバージョンは TexTransTool v1.0.0 です！
+
+TexTransTool v1.0.0 にて行うことというのは特に考えていません。マイグレーションのポリシーが少し変わると思いますが、それだけでしょう。v1.0.0 のブログでは何を書こうかな ... ?
