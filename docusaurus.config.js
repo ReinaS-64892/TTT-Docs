@@ -134,6 +134,10 @@ const config = {
           {
             to: '/docs/Reference/AtlasTexture/ITTShaderTextureUsageInformation',
             from: ['/docs/Reference/AtlasTexture/AtlasShaderSupport']
+          },
+          {
+            to: '/blog/2025/05/14/TTT-v0.10.0',
+            from: ['/blog/2025/05/10/TTT-v0.10.0']
           }
         ],
       }
