@@ -12,6 +12,8 @@ sidebar_position: 7
 
 ## 属性
 
+- [MainComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
 - フェーズ -> [AfterUVModification | UV変更後](/docs/Reference/General/ExecutionOrder.md#afteruvmodification--uv変更後)
 - Can be used [AsLayer](/docs/Reference/MultiLayerImageCanvas/AsLayer.md)
 
@@ -150,19 +152,6 @@ sidebar_position: 7
 
 ### 詳細設定
 
-![AdvancedSetting](img/sd-AdvancedSetting.png)
-
-#### 高品質なパディング
-
-通常パディングはディザのようなジャギが発生することがあります。
-
-それを処理時間と引き換えに、ジャギが発生しない高品質な生成をするオプションです。
-必要になるケースも非常に少なく、高負荷でアバターのビルド時間の増加を招くので必要がなければ使用しないことを推奨します。
-
-:::info
-プレビュー(NDMF Preview等)では、動作しないことがあります。
-:::
-
 #### パディング
 
 `MipMap` でにじまないようにするために、ある程度デカールを広めに塗る機能です。
@@ -172,26 +161,6 @@ sidebar_position: 7
 :::warning
 この `パディング` の値を非常に大きな値にした場合に、 デカールの描画が壊れたり、意図しない場所にデカールの色が塗られることがあります。
 :::
-
-### 実験的機能
-
-:::warning
-これらは実験的機能で予告なく削除や変更が行われる可能性があります。
-:::
-
-#### OverrideDecalTextureWithMultiLayerImageCanvas
-
-[MultiLayerImageCanvas](/docs/Reference/MultiLayerImageCanvas) の内容をそのまま [デカールテクスチャー](#デカールテクスチャー) として使用できる機能
-
-#### 深度デカール
-
-デカールを張る方向から`一番手前の部分`にのみデカールが張られるようにできる、とても実験的な機能です。
-
-##### 深度反転
-
-深度判定を反転し、`一番手前だけ`を`後ろ側になった場所すべて`にします。
-
-デカールを使って影のような表現が可能になります。
 
 ## SimpleDecalに関する FAQ
 
@@ -205,7 +174,9 @@ sidebar_position: 7
 
 後者のエミッションの場合でも、エミッション用のプロパティを選択することで解決できますが、該当となるプロパティにテクスチャーが割り当てられていない場合適用されないのでご注意ください。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 [概要](#概要) に書いてあるようにこのコンポーネントの生まれは、[AtlasTexture](/docs/Reference/AtlasTexture) のために作成された UVtoUV技術 (内部名称`TransTexture`) の転用から始まり、この TexTransTool の色改変系機能として最初のコンポーネントとして、 TTT v0.1.0 から追加されました。
 
@@ -217,3 +188,4 @@ sidebar_position: 7
 それに、この SimpleDecal のために追加した色合成の技術も、またいくつかの転用を生み、もう一つの[主要な機能](/docs/Reference/MultiLayerImageCanvas)を生む原因となったのも ... また別のお話。
 
 ちなみに ... 今では転用として使用し始めたした Decal の方がこの技術をメインで使用しています。([AtlasTexture](/docs/Reference/AtlasTexture) は矩形移動だけで済んでしまったため、それのために作ったにもかかわらず、意味がなくなってしまっているがために (いずれ [AtlasTexture](/docs/Reference/AtlasTexture) も矩形移動で済まなくなれば話は変わりますが、まだそうではない))
+</details>

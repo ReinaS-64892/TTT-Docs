@@ -4,6 +4,15 @@
 
 [SimpleDecal](/docs/Reference/SimpleDecal) や [AtlasTexture](/docs/Reference/AtlasTexture)で、アイランド単位で何かを行うための、アイランドの選択用コンポーネント。
 
+:::info
+IslandSelector は通常(付与されている GameObjectを)無効化すると 何も選択していない IslandSelector としての振る舞いをするようになります。
+:::
+
+## 属性
+
+- [SubComponent](/docs/Reference/General/ComponentBasicBehavior.md#maincomponent-と-subcomponent)
+- [OwnedComponent](/docs/Reference/General/ComponentBasicBehavior.md#ownedcomponent-と-annotationcomponent)
+
 ## 選択コンポーネント
 
 ### BoxIslandSelector & SphereIslandSelector
@@ -123,7 +132,9 @@ IslandSelectorNOT と同様、子のGameObject 1番目だけを読み取り、2�
 
 その指定したいマテリアルを入れることが可能なリストです。
 
-## ReinaSakiria's-Note
+---
+<details>
+  <summary>**ReinaSakiria's-Note**</summary>
 
 元々 IslandSelector の原型は IslandCulling という、SimpleDecal に TexTransTool v0.3.0 から追加された機能でした。
 
@@ -132,3 +143,4 @@ IslandSelectorNOT と同様、子のGameObject 1番目だけを読み取り、2�
 SimpleDecal の Island 単位の範囲制限は非常に便利でしたが、枠の中という制約は非常に面倒で自由度が低かったため、これを(TTT v0.7.0 にて)汎用 Island 選択ツールとして切り離したものが IslandSelector です。
 
 これによって [AtlasTexture](/docs/Reference/AtlasTexture) が Island 選択を基に調節をさらに細かくできる実験的機能が実現出来たり、 [SingleGradationDecal](/docs/Reference/SingleGradationDecal.md) がそれをほぼほぼ前提とすることで単純なインターフェースで済むようになりました。やったね！
+</details>

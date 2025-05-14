@@ -130,6 +130,10 @@ const config = {
           {
             to: '/docs/Reference/MultiLayerImageCanvas/YAxisFixedGradientLayer',
             from: ['/docs/Reference/MultiLayerImageCanvas/YAsixFixedGradientLayer']
+          },
+          {
+            to: '/docs/Reference/AtlasTexture/ITTShaderTextureUsageInformation',
+            from: ['/docs/Reference/AtlasTexture/AtlasShaderSupport']
           }
         ],
       }

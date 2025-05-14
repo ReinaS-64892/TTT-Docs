@@ -70,6 +70,10 @@ TexTransTool に限らず、ツールのコンポーネントが SceneView に�
 
 ## GTX10XX や GTX9XX 系の環境で正しく TTT が動作しない
 
+:::info
+TTT v0.10.0 にてこれらバグは修正されています！
+:::
+
 TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使用している環境で、UnityEditor が DirectX11 を使用している場合、以下のものは確実に正常動作しません。
 
 - SimpleDecal
@@ -116,3 +120,13 @@ TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使
 VMware の Driver との相性が非常に悪いのか VMware の ComputeShader 実装は TTT の使用に耐えられるものではないようです。
 
 根本的な解決方法は見つかりませんでした。他の TTT の使用に耐えられる ComputeShader 実装を持つ環境に変えてください。
+
+## TexTransCore って何？
+
+[github repository](https://github.com/ReinaS-64892/TexTransCore)
+
+これは、TexTransTool の C# Generic な部分の存在で、下記 TTCE-Wgpu のためにバージョン管理の都合で切り離された存在、TexTransTool は TexTransCore なしでは動作できない、TexTransTool 唯一の依存パッケージになります。
+
+## TTCE-Wgpu って何？
+
+[こちらを参照](/docs/TexTransTool-ExtensionPackages/TTCE-Wgpu)
