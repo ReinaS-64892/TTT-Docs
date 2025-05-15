@@ -95,8 +95,11 @@ TTT v0.9.x の既知のバグとして、GTX10XX や GTX9XX などの GPU を使
 :::warning
 上級者向けの設定を使用します！設定するときは細心の注意を払ってください！
 :::
+:::info
+VCC でも可能ですが、私(Reina_Sakiria)の環境(Linux)では VCC は動作しないのでここで解説しません。
+:::
 
-はじめに、 [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/) をなければインストールしてください。VCC では設定することができません！
+はじめに、 [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/) をインストールしてください。
 
 次に、プロジェクトの `管理` を開き `起動オプションを変更` をクリックしてください。  
 ![faq-OpenChangeLaunchOption](img/faq-OpenChangeLaunchOption.png)
@@ -130,3 +133,11 @@ VMware の Driver との相性が非常に悪いのか VMware の ComputeShader 
 ## TTCE-Wgpu って何？
 
 [こちらを参照](/docs/TexTransTool-ExtensionPackages/TTCE-Wgpu)
+
+## AMD Radeon 系の環境で正しく TTT が動作しない
+
+[参考 Issue](https://github.com/ReinaS-64892/TexTransTool/issues/968)
+
+TTT v0.9.x ~ v0.10.x にて確認されている、DirectX 11 + AMD Radeon GPU で TTT PSD Importer などが正常に動作しないようです。
+
+Vulkan を使用すると正常に動作するようなので Vulkan を使用してください。 [Vulkan を使用するには](#unityeditor-を-vulkan-で起動する)
