@@ -141,3 +141,7 @@ VMware の Driver との相性が非常に悪いのか VMware の ComputeShader 
 TTT v0.9.x ~ v0.10.x にて確認されている、DirectX 11 + AMD Radeon GPU で TTT PSD Importer などが正常に動作しないようです。
 
 Vulkan を使用すると正常に動作するようなので Vulkan を使用してください。 [Vulkan を使用するには](#unityeditor-を-vulkan-で起動する)
+
+## 言語設定を変更したい
+
+上部のツールバー `Tools/TexTransTool/Menu` から [TTT Menu](/docs/Reference/EditorWindow/TTT-Menu.md) を開き、[Language](/docs/Reference/EditorWindow/TTT-Menu.md#language) から変更可能です。
