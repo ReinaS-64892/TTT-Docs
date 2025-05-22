@@ -138,6 +138,10 @@ const config = {
           {
             to: '/blog/2025/05/14/TTT-v0.10.0',
             from: ['/blog/2025/05/10/TTT-v0.10.0']
+          },
+          {
+            to: '/docs/FAQ/CompatibilityWithOtherNonDestructiveTools',
+            from: ["/docs/FAQ/CompatibleWithOtherNonDestructiveTools"]
           }
         ],
       }
