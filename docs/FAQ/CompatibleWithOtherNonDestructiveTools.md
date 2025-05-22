@@ -34,9 +34,9 @@ TexTransTool との互換性がないツールです。
 
 ### [NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262)
 
-NDMF の Optimizing Phase で動作するべき存在であるはずが Transforming Phase にて動作し、TTT AtlasTexture よりも早く動作し、デバッグ不可能なメッシュを生成し TTT AtlasTexture の動作を破壊します。
+NDMF の Optimizing Phase で動作するべき存在であるはずが Transforming Phase にて動作し、TTT AtlasTexture よりも早く動作し、TTT AtlasTexture の動作を破壊します。
 
-[NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262) はラッパーでしかなく、核の部分である `Mantis Lod Editor` は 完全なプロプライエタリなソフトウェア なためサポートは不可能です。 正しく Optimizing Phase にて動作する [Meshia Mesh Simplification](https://ramtype0.booth.pm/items/6944218) を使用してください。
+[NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262) はラッパーでしかなく、核の部分である `Mantis Lod Editor` は 完全なプロプライエタリなソフトウェア なため、サポート対象外であり、(開発者が所持していない(購入する意思もない)ためサポートは不可能です。) 正しく Optimizing Phase にて動作する [Meshia Mesh Simplification](https://ramtype0.booth.pm/items/6944218) を使用してください。
 
 具体的な内容エラーやワークアラウンドはこのあたりを参照してください。
 
