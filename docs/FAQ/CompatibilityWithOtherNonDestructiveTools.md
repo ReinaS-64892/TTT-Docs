@@ -27,11 +27,14 @@ TexTransTool は NDMF の Plugin として動作する、 OpenSourceSoftware な
 
 ### [VRCQuestTools](https://kurotu.github.io/VRCQuestTools/)
 
-VRCQuestTools は [VRCFury](https://vrcfury.com/) との互換性のために、初期設定では (NDMF) Transforming Phase にて動作します。
+VRCQuestTools v2.10.0 またはそれ以上のバージョンとの併用を推奨します。
 
-ですが、 Quest 向けへの変換は TexTransTool としては TTT の後に動作することを想定していて、Transforming Phase にて VQT を動作させることは TTT としては非推奨です。
+アバターに [VRCFury](https://vrcfury.com/) のコンポーネントが存在する場合、 VRCQuestTools は互換性のために、初期設定(Auto)では `(NDMF) Transforming Phase` にて動作するようになります。
 
-Quest への変換を利用する場合は [VRCFury](https://vrcfury.com/) を削除し VQT の [NDMF変換フェーズ](https://kurotu.github.io/VRCQuestTools/ja/docs/references/components/avatar-converter-settings#ndmf%E5%A4%89%E6%8F%9B%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA) を Optimizing にするか、 TTT AtlasTexture を PC 向けとは別の設定を作る必要が発生する場合があります。
+ですが、TexTransTool としては`非破壊的な変換`の実行を TTT の後に動作することを想定しており、`(NDMF) Transforming Phase`で動作させることは非推奨です。
+
+`非破壊的な変換`を利用する場合は [VRCFury](https://vrcfury.com/)(とそれに連なるコンポーネントを全て) を削除する。
+または、問題が発生したら TTT AtlasTexture を Quest向けに調整したものを個別に用意してください。
 
 ## 互換性がサポートされていないツール
 
@@ -47,9 +50,9 @@ TexTransTool との互換性がないツールです。
 
 ### [NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262)
 
-NDMF の Optimizing Phase で動作するべき存在であるはずが Transforming Phase にて動作し、TTT AtlasTexture よりも早く動作し、TTT AtlasTexture の動作を破壊する場合があります。
+`(NDMF) Optimizing Phase`で動作するべき存在であるはずが Transforming Phase にて動作し、TTT AtlasTexture よりも早く動作し、TTT AtlasTexture の動作を破壊する場合があります。
 
-[NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262) はラッパーでしかなく、核の部分である `Mantis Lod Editor` は 完全なプロプライエタリなソフトウェア なため、サポート対象外であり、(開発者が所持していない(購入する意思もない)ためサポートはもとより不可能なので) 正しく Optimizing Phase にて動作する [Meshia Mesh Simplification](https://ramtype0.booth.pm/items/6944218) を使用してください。
+[NDMF Mantis Lod Editor](https://hitsub.booth.pm/items/5409262) はラッパーでしかなく、核の部分である`Mantis Lod Editor`は 完全なプロプライエタリなソフトウェア なため、サポート対象外であり(開発者が所持していない(購入する意思もない)ためサポートはもとより不可能なので)、正しく`(NDMF) Optimizing Phase`にて動作し非常に高速な [Meshia Mesh Simplification](https://ramtype0.booth.pm/items/6944218) を使用してください。
 
 具体的な内容エラーやワークアラウンドはこのあたりを参照してください。
 
