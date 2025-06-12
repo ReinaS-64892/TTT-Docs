@@ -1,0 +1,162 @@
+---
+title: TexTransTool と Linux
+description: 私が、Linux にメイン環境を移した果ての記録
+authors: ReinaSakiria
+tags: [Linux]
+---
+
+## はじめに
+
+これは、 TexTransTool の開発者である 私(Reina_Sakiria) が Linux にメイン環境を移したその果ての記憶を綴った物だよ。
+
+その一部はここにも書かれてるよ。 [参考](https://github.com/ReinaS-64892/VRCAvatarBuildServerTool?tab=readme-ov-file#%E3%81%93%E3%82%8C%E3%81%AF%E3%81%AA%E3%81%AB)
+
+## Unity のセットアップ
+
+ことは、私が ArchLinux のセットアップを終え、とりあえず [WayfireWM](https://github.com/WayfireWM/wayfire) 環境を整えて、Windows の頃から HDD に退避していた UnityProject を引き出すところから始まります。
+
+unityhub を aur から `paru -S unityhub` をしインストールし、次に `paru -S alcom` をしたら `node` が衝突したので [alcom](https://github.com/vrc-get/vrc-get/tree/master/vrc-get-gui) を git clone して、その場で無理やりビルドして誤魔化して、通常の UnityEditor 2022.3.22f1 環境を整えました。 (後に自分で PKGBUILD をいじるようになりました [参考](https://github.com/ReinaS-64892/ReinaS-Custom-PKGBUILD/blob/351be85dd928da4ad536b6960226c39b1c26ea55/alcom-beta/PKGBUILD))
+
+## NvidiaGPU-RTX2060SP
+
+さて Project を起動します！ UnityEditor 2022.3.22f1 (OpenGL) にて
+
+ああ、 lilToon の描画がおかしいですね！！！`Shader Refresh` でごまかせたときもありますが、あまり安定しません。
+
+それはそれは良いのですが、TexTransTool が一切動作しません。 どうやら v0.8.x の頃は正常に動作したようですが、 v0.9.x からは動作しないようです。
+
+私はその変更を作った人なので全て知っていますが、そのバージョンで行われた大きなことは、ほぼすべての処理が ComputeShader の実装になったことです。(v0.10.0 からは AtlasTexture まで。)
+
+私は思いました。 ComputeShader は GPU の歴史の中では結構新しい物であり、古来から存在する OpenGL に追加された ComputeShader 実装は違法建築のようなもので安定しないものなのではないか、と。
+
+その予想を確かめるため、 UnityEditor に `-force-vulkan` を起動時引数に渡し、 Vulkan で起動してみます。(Windows 環境にて DirectX では壊れるけど、 Vulkan では正常に動作するというケースに当たったことがあり、私は Vulkan 実装のほうが信頼していることがあります。)
+
+起動処理が終わり、GUI が描画されるとなったその瞬間、即座に Unity は死にました。 __は ... ?__
+
+`~/.config/unity3d/Editor.Log` を見てみると、`UnityEditor 2022.3.22f1` は Vulkan で起動すると GUI を描画しようとした瞬間に SIGSEGV で死んでいる様子でした、私は Unity のネイティブな領域までデバッグする気持ちはなかったので、ひとまず、`UnityEditor 2022.3.59f1` にしてみて起動することにしました。
+
+なんと、正常に動作します。上部ウィンドウ名に `<vulkan>` と表示され、 TexTransTool は完璧に動作し、 ついでに lilToon は OpenGL のときよりも安定して動作しました。
+
+これで一見落着 ... と思いきや、バージョンを変えてしまっていたがために VRCSDK のビルドは可能ですが VRChat のサーバーサイドバリデーションのセキュリティチェックに失敗しまともに使用できません。(治安の悪い手法は、効果はなかったようです ... 悲しみ)
+
+そこで私は思いました、VRCSDK のビルドが可能な `UnityEditor 2022.3.22f1 (OpenGL)` と TexTransTool が正常動作できる `UnityEditor 2022.3.59f1 (Vulkan)`。
+
+この2つを繋いでしまえばいい、と。こうして作られたのが、 [VRCAvatarBuildServerTool](https://github.com/ReinaS-64892/VRCAvatarBuildServerTool) です。
+
+これによって、私は Linux にて　2つの UnityEditor を起動し、なんとかアバターをアップロードできる環境を構築できました。
+
+そういえば OpenGL の ComputeShader を取り扱う UnityEngine や TTT が悪いのかと思いきや `LIBGL_ALWAYS_SOFTWARE` を有効にしたとき、 TexTransTool は完璧な動作をするため、 TTT や Unity が悪いかと言うと微妙。
+
+Vulkan にて同一のコードで完璧な動作をしているため、正直 __Nvidia の Proprietary な OpenGL 実装が完全に壊れている__ としか私には思えません。
+
+ねこ〜(社会性フィルター)
+
+Nvidia の主なターゲットは(多分) ゲーマーなので、ゲームをするに適した OS であるところの Windows で動かしたほうが安定動作しますね！(TexTransTool は DirectX-11 にて 同一コード の同一 GPU で正常に動作していたので。)
+
+:::info
+[Nouveau](https://wiki.archlinux.jp/index.php/Nouveau) は試していません。それであれば正常に動く可能性は否定できませんが、[Nouveau の FeatureMatrix](https://nouveau.freedesktop.org/FeatureMatrix.html) によると `Compute` は `WIP` のようです。
+:::
+
+## AMDGPU-RX6700XT
+
+色々とあって radeon の GPU を手にすることができました。Nvidia の Proprietary なドライバを Linux から完全に削除し、 mesa と `vulkan-radeon` を入れ、デスクトップ環境から Unity が動作するようになりました。
+
+本題の ComputeShader ですが、まずは radeon の OpenGL 実装が動作するかを確かめるため、まずは `UnityEditor 2022.3.22f1 (OpenGL)` を起動してみたところ ... 九割正常に動作しました！完璧ではないですが、完全に壊れている Nvidia に比べたら、良い実装ですね！
+
+しかし、それは九割であり、TTT SimpleDecal や SingleGradationDecal、 AtlasTexture は正常にですが、 [MLIC](/docs/Reference/MultiLayerImageCanvas) の レイヤーにて Clipping を行うと壊れてしまうようでした。
+
+(一部のタイルだけ動作して、それが実行時ごとに違うようなのでなにか怪しい部分を踏み抜いたのかもしれません。)
+
+九割動作するとはいえ、これでは今私が持つアバターのビルドはできません、 Nvidia のときと同じように Vulkan にして起動してみましょう！
+
+`UnityEditor 2022.3.59f1 (Vulkan)` を起動！ GUI は正常に動作し、一見問題がないように見えます。
+
+ですが、適当なインスペクターのフィールドをホバーすると、 `tool tip` が出現した瞬間、 UnityEditor が静かに死にました。 __え？__
+
+適当な場所にカーソルを置いた時にでも、そこにフィールドがあれば UnityEditor 死んでしまう。
+
+ちなみに、Unity 6000 では発生しませんが、丁度 LTS の期間が切れてしまったようで 2022.3 の LTS で発生するこのバグは修正されません！！！
+
+https://issuetracker.unity3d.com/issues/linux-vulkan-silent-crash-when-tooltip-appears-while-hovering-over-a-label
+
+ねこ〜(社会性フィルター)
+
+調べてみると、 `22f1 (Vulkan)` は Nvidia GPU 同様死ぬようですが、 `35f1 (Vulkan)` などは死なないようなので、バージョンを二分探索していたら `39f1` と `40f1` に境界があったため、`UnityEditor 2022.3.39f1 (Vulkan)` を使用すれば、正常に TTT を使用することができますね！
+
+:::info
+他の Radeon 用ドライバは試していません。もし誰か試してみて、OpenGL の ComputeShader が完璧に動作するものがあったら教えてください！
+:::
+:::info
+私は所持していないため、 intel の GPU ではどの程度動作するかはあまりわかっていません。
+フレンドさんの報告では `Intel Arc` にて OpenGL でも MLIC まで使用している範囲では正常に動作するそうです。
+
+もしかしたら一番優れた OpenGL の ComputeShader 実装を持っているのかもしれませんね！ (中身が Vulkan という噂もあり、そのおかげである説もありますが)
+:::
+
+## 結論
+
+Nvidia GPU なら `UnityEditor 2022.3.59f1 (Vulkan)`  
+Radeon GPU なら `UnityEditor 2022.3.39f1 (Vulkan)`
+
+を使用し、
+
+`UnityEditor 2022.3.22f1 (OpenGL)` を VRCSDK ビルド用 Editor
+
+にして、[VRCAvatarBuildServerTool](https://github.com/ReinaS-64892/VRCAvatarBuildServerTool) を用いてその Editor を繋ぐことで、 TexTransTool をビルドしアップロードが可能です！
+
+:::tip
+後に解説する TTCE-Wgpu がない場合は `ClientSideNDMFExecution` を有効にしないと、TTT が OpenGL の Editor でビルドされてしまうため注意してください。
+:::
+
+## TTCE-Wgpu
+
+この話にはもう少し続きがあります。
+
+それは、[VRCAvatarBuildServerTool](https://github.com/ReinaS-64892/VRCAvatarBuildServerTool) は2つのパソコンの間を超越できる仕組みであったことから始まります。
+
+手元のパソコンでは何一つビルド処理を行わず、ビルド処理を全て Server となるパソコンで行うことで、手元の Client となる Editor を動かす PC に負荷がかかることを回避したいと思いました。
+
+:::info
+私は TexTransTool のある程度ヘビーなユーザーであるのと、 TTT は私が全力で GPU を叩くように最適化したことにより、 TTT のビルドが走ると、パソコンが少しの間画面がフリーズしてしまう環境でした。
+:::
+
+その時の、今の私の PC 環境はこのようになっていました。
+
+- ServerPC (Ubuntu Server)
+  - RTX2060SP
+- MainPC (Arch Linux)
+  - RX6700XT
+
+Server 用として使っている PC は以前メインとして使っていた GPU が移植され RTX2060SP の環境です。
+
+つまり、 VRCSDK のビルドが可能な `UnityEditor 2022.3.22f1 (OpenGL)` は TexTransTool が完全に動作しない環境。
+
+私は思い出しました、 TexTransTool には強力な抜け道があるということ！
+
+それは [TTCE-Wgpu](https://github.com/ReinaS-64892/TTCE-Wgpu)
+
+これは Unity の GraphicsAPI Backend を使用せずに、独自で Vulkan などの API を Wgpu 越しに叩くことが可能な、TexTransCoreEngine 実装です！
+
+:::info
+TexTransCoreEngine とは、 TexTransTool 内部で使用されている、ある種の ComputeShader の抽象化インターフェースです。
+
+この Engine 上で TexTransTool は動作し、その API は Vulkan と Unity GraphicsAPI の中間レベルの抽象度で、 Unity の API に依存しません。
+:::
+
+これを使えば、なんと！ OpenGL の Unity 上からでも、Vulkan Driver を自ら取得し Unity の設定にかかわらず Vulkan を使用することが可能です！！！
+
+もともとは、 [TTCE-Wgpu](https://github.com/ReinaS-64892/TTCE-Wgpu) は TTT が Unity から脱出できることを証明するための、おもちゃ程度のもので実用に耐えうるものではなかったのですが、必要になってしまったがために、TTT に バックエンド選択などが実装され実用可能な状態にしました。
+
+こうして、VRCSDK のビルドが可能な `UnityEditor 2022.3.22f1 (OpenGL)` 上で [TTCE-Wgpu](https://github.com/ReinaS-64892/TTCE-Wgpu) を用いて TexTransTool が正常に動作可能になり、アバターのビルドを全て Server 側で行うことが可能になり、手元の PC が固まることのない快適なアバター改変環境が構築できました。やったね！
+
+:::info
+[TTCE-Wgpu](https://github.com/ReinaS-64892/TTCE-Wgpu) の Wgpu は OpenGL を使用することもできますが、Nvidia の Proprietary な OpenGL 実装を使用すると Unity と同様に完全に壊れていました、Unity は悪くないのかもしれません。
+:::
+
+## おわり
+
+TexTransTool は ComputeShader が動作するかどうかに非常に影響を受けます。 TTT の処理はほぼすべてが ComputeShader にて動作するため。
+
+私と同じように Linux 環境にて TTT を動かしたいという人は、 OpenGL はとりあえず捨てて Vulkan の Driver を正しくインストールし、2つの UnityEditor を連携させて、いい感じに環境を構築してみてください！
+
+楽をしたいのであれば、 UnityEditor それ自体の安定性から Linux 環境自体がおすすめできませんが、何らかの理由から Windows を使用しない場合は頑張ってみてください。この記事が多少 TTT を使用する Linux user の参考になれば幸いです。
