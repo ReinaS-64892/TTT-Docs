@@ -160,3 +160,21 @@ TexTransTool は ComputeShader が動作するかどうかに非常に影響を�
 私と同じように Linux 環境にて TTT を動かしたいという人は、 OpenGL はとりあえず捨てて Vulkan の Driver を正しくインストールし、2つの UnityEditor を連携させて、いい感じに環境を構築してみてください！
 
 楽をしたいのであれば、 UnityEditor それ自体の安定性から Linux 環境自体がおすすめできませんが、何らかの理由から Windows を使用しない場合は頑張ってみてください。この記事が多少 TTT を使用する Linux user の参考になれば幸いです。
+
+---
+
+追記 06/13
+
+フレンドと話していて、radeon かつ X Window Manager 環境では `22f1` を Vulkan で起動して普通に使えていると聞き、そういえば radeon 環境になってから `22f1` を Vulkan で試した記憶が怪しい気がします。私の環境は Wayland Window Manager ですが、試してみましょう。
+
+バージョンを `UnityEditor 2022.3.22f1` にして、 `-force-vulkan` にて起動！ あれ ... __動くじゃん！！！__
+
+[AMDGPU-RX6700XT](#amdgpu-rx6700xt) のセクションにて
+
+>調べてみると、 `22f1 (Vulkan)` は Nvidia GPU 同様死ぬようですが、 `35f1 (Vulkan)` などは死なないようなので、バージョンを二分探索していたら `39f1` と `40f1` に境界があったため、`UnityEditor 2022.3.39f1 (Vulkan)` を使用すれば、正常に TTT を使用することができますね！
+
+「`22f1 (Vulkan)` は Nvidia GPU 同様死ぬ」 の部分は完全に誤りのようで、TexTransTool も完璧に動作し、特に問題はなさそうです。
+
+どうやら今回の問題の半分は Nvidia の Proprietary な GPU ドライバーと `UnityEditor 2022.3.22f1 (Vulkan)` の相性が悪い。これに尽きるようです。
+
+それはつまり ... __Nvidia は捨てて、Radeon を使え！__ それと __OpenGL も捨てて、 Vulkan を使え！__ ってことですね！
