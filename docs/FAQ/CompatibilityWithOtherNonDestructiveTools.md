@@ -12,7 +12,7 @@ TexTransTool は以下のような条件を満たすツールとは可能な限�
 - [AAO: Avatar Optimizer](https://vpm.anatawa12.com/avatar-optimizer)
   - AAO との API 連携も存在します。
 
-ここに乗っていないものであっても、 OSS でかつ NDMF ツールとして動作するものは 互換性サポート対象 です。
+ここに乗っていないものであっても、 OSS でかつ NDMF ツールとして動作するような、上記の条件を満たすツールは 互換性サポート対象 です。
 
 :::info
 ここで言う OSS は MIT License などの [オープンソースライセンス](https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9) の元配布されていることを指します。
