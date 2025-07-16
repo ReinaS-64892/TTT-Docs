@@ -1,6 +1,10 @@
 # 他のツールとの互換性
 
-TexTransTool は NDMF の Plugin として動作する、 OpenSourceSoftware なツールとは可能な限り、互換性を保つようにサポートします。
+TexTransTool は以下のような条件を満たすツールとは可能な限り、互換性を保つようにサポートします。
+
+- NDMF の Plugin として動作可能
+- OpenSourceSoftware (OSS) なライセンスで配布されている
+- Linux の UnityEditor 環境で動作可能
 
 例えばこれらは開発者の環境に存在するレベルで、互換性がサポートされています。
 
