@@ -142,3 +142,7 @@ LAC はこのチュートリアル書いている時点では、TTT よりも先
 
 ですが、LAC がある場合は LAC の[個別に設定する機能](https://lac.limitex.dev/ja/docs/components/texture-compressor/#%E5%87%8D%E7%B5%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3)を用いたほうが、設定が見やすくなるし、混乱をのもとを減らせるのでその場合は LAC の方の機能を活用することをおすすめします。
 :::
+
+## クレジット
+
+- はみにの立体箱/イチゴ : https://hamini.booth.pm/items/7328789
